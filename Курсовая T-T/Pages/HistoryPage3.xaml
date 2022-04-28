@@ -1,0 +1,78 @@
+﻿<Page x:Class="Курсовая_T_T.Pages.HistoryPage3"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Курсовая_T_T.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="HistoryPage3">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="80*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\background-4.png"/>
+        </Grid.Background>
+        <TextBlock Background="#FFD2C1A1" FontFamily="Segoe Script" FontSize="14" Grid.ColumnSpan="4" Grid.RowSpan="3"> 
+            Эпоха Хань стала для напитка временем 
+            <LineBreak />
+            распространения. Заварку стали продавать на 
+            <LineBreak />
+            рынках. В провинции Сычуань чай могут 
+            <LineBreak />
+            позволить себе представители всех слоев 
+            <LineBreak />
+            населения. В эпоху Тан появляются новые 
+            <LineBreak />
+            технологии обработки чайных листов, 
+            <LineBreak />
+            позволяющие производить продукцию в большем 
+            <LineBreak />
+            объеме. Напиток прочно входит в жизнь 
+            <LineBreak />
+            китайцев и превращается в культ. 
+            <LineBreak />
+            Сам император принимает подношения в виде 
+            <LineBreak />
+            элитных сортов чая.
+        </TextBlock>
+            <Button Content="Предыдущая" Click="HistoryPag2_Click" Background="#FFD2C1A1" Grid.Column="0" Grid.Row="4" />
+
+            <Button Content="Следующая" Click="HistoryPage4_Click" Background="#FFD2C1A1" Grid.Column="7" Grid.Row="4" />
+
+            <Button x:Name="Play" Click="PlayMusic_Click" Grid.Column="5" Grid.Row="3" >
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+                <Button.Background>
+                    <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Interface\voice_on.png" Stretch="Fill" TileMode="None"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="Stop" Click="StopMusic_Click" Grid.Column="6" Grid.Row="3" >
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+                <Button.Background>
+                    <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Interface\voice_off.png" Stretch="Fill" TileMode="None"/>
+                </Button.Background>
+            </Button>
+        <Frame x:Name="FrameHistory" Grid.ColumnSpan="8" Grid.RowSpan="5" />
+    </Grid>
+</Page>

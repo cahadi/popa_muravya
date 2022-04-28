@@ -1,0 +1,73 @@
+﻿<Page x:Class="Курсовая_T_T.Pages.TeaPage8"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Курсовая_T_T.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="TeaPage8">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="80*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\background-3.png"/>
+        </Grid.Background>
+
+        <TextBlock Background="#FFD7D2B1" FontFamily="Segoe Script" FontSize="14" Grid.ColumnSpan="4" Grid.RowSpan="4">
+            Шаг 8. 
+            <LineBreak />
+            Выбор чай в подарок
+            <LineBreak />
+Если выбираете чай для друзей, которые не очень 
+            <LineBreak />
+            хорошо разбираются в нём, то обратить 
+            <LineBreak />
+            внимание стоит на классические сорта, 
+            <LineBreak />
+            которые все знают, их всего 10-15. Тегуаньинь 
+            <LineBreak />
+            (铁观音, tiě guānyīn), пуэр и дахунпао 
+            <LineBreak />
+            (大红袍, dàhóngpáo) – это три бестселлера. Если 
+            <LineBreak />
+            вам хочется цветочности и праздника во вкусе, 
+            <LineBreak />
+            то покупайте тегуаньинь. Если хотите 
+            <LineBreak />
+            крепости, то покупайте пуэры. А если хотите 
+            <LineBreak />
+            мягкости и приятных ощущений, то 
+            <LineBreak />
+            покупайте красные чаи, которые мы называем 
+            <LineBreak />
+            чёрные, это дяньхун (滇红, diānhóng) и то, что 
+            <LineBreak />
+            делают в Уишане – серебряные и золотые брови, 
+            <LineBreak />
+            сяочжун.
+            
+            
+        </TextBlock>
+            <Button Content="Предыдущая" Click="TeaPage7_Click" Background="#FFD7D2B1" Grid.Column="0" Grid.Row="4"/>
+
+            <Button Content="Следующая" Click="TeaPage9_Click"  Background="#FFD7D2B1" Grid.Column="7" Grid.Row="4"/>
+        <Frame x:Name="FrameTea"  Grid.ColumnSpan="8" Grid.RowSpan="5" />
+    </Grid>
+</Page>
