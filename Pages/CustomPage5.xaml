@@ -1,0 +1,86 @@
+﻿<Page x:Class="Курсовая_T_T.Pages.CustomPage5"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Курсовая_T_T.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CustomPage5">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="80*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\background-5.png"/>
+        </Grid.Background>
+        <TextBlock Background="#FFF6E8CD" Grid.ColumnSpan="3" Grid.RowSpan="3">
+            Музыка для церемонии
+            <LineBreak />
+            <LineBreak />
+            Традиция чаепития представляет собой не 
+            <LineBreak />
+            только саму процедуру заваривания и 
+            <LineBreak />
+            употребления чая. Национальный ритуал 
+            <LineBreak />
+            включает также и прослушивание колоритной 
+            <LineBreak />
+            китайской музыки.  <LineBreak />
+            Провести настоящий ритуал чаепития нельзя 
+            <LineBreak />
+            без музыки. Подбор ее – настоящая культура 
+            <LineBreak />
+            чаепития. Она должна быть спокойной и 
+            <LineBreak />
+            ненавязчивой, а по звучанию напоминать 
+            <LineBreak />
+            национальные инструменты. Можно встретить 
+            <LineBreak />
+            оригинальный вариант, когда в музыкальную 
+            <LineBreak />
+            композицию вписывается щебет певчих птиц, 
+            <LineBreak />
+            журчание лесного ручья, шелест опавших 
+            <LineBreak />
+            листьев в лесу.
+        </TextBlock>
+        
+            <Button Content="Предыдущая" Click="CustomPage4_Click" Background="#FFF6E8CD" Grid.Column="0" Grid.Row="4"/>
+
+            <Button Content="Следующая" Click="CustomPage6_Click" Background="#FFF6E8CD" Grid.Column="7" Grid.Row="4"/>
+
+        <Button x:Name="Play" Click="PlayMusic_Click" Grid.Column="3" Grid.Row="3" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+                <Button.Background>
+                    <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Interface\play.png" Stretch="Fill" TileMode="None"/>
+                </Button.Background>
+            </Button>
+        <Button x:Name="Stop" Click="StopMusic_Click" Grid.Column="4" Grid.Row="3" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+                <Button.Background>
+                    <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Interface\stop.png" Stretch="Fill" TileMode="None"/>
+                </Button.Background>
+            </Button>
+        <Frame x:Name="FrameCustom" Grid.ColumnSpan="8" Grid.RowSpan="5" />
+    </Grid>
+</Page>
