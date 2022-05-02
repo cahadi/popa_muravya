@@ -35,18 +35,5 @@ namespace Курсовая_T_T.Pages
         {
             FrameCustom.Content = new CustomPage9();
         }
-        private void PlayMusic_Click(object sender, RoutedEventArgs e)
-        {
-            SoundPlayer sp = new SoundPlayer();
-            sp.SoundLocation = "C:/Users/ap357/OneDrive/Рабочий стол/Курсовая/Курсовая T-T/Курсовая T-T/Озвучка страниц/Custom/CustomPage8.wav";
-            sp.Load();
-            sp.PlayLooping();
-        }
-
-        private void StopMusic_Click(object sender, RoutedEventArgs e)
-        {
-            SoundPlayer sp = new SoundPlayer();
-            sp.Stop();
-        }
     }
 }

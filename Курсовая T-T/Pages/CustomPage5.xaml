@@ -29,9 +29,8 @@
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\background-5.png"/>
         </Grid.Background>
-        <TextBlock Background="#FFF6E8CD" Grid.ColumnSpan="3" Grid.RowSpan="3">
+        <TextBlock Background="#FFF6E8CD" Grid.ColumnSpan="4" Grid.RowSpan="4" FontFamily="Segoe Print" FontSize="14">
             Музыка для церемонии
-            <LineBreak />
             <LineBreak />
             Традиция чаепития представляет собой не 
             <LineBreak />
@@ -56,16 +55,14 @@
             <LineBreak />
             композицию вписывается щебет певчих птиц, 
             <LineBreak />
-            журчание лесного ручья, шелест опавших 
-            <LineBreak />
-            листьев в лесу.
+            журчание лесного ручья
         </TextBlock>
         
             <Button Content="Предыдущая" Click="CustomPage4_Click" Background="#FFF6E8CD" Grid.Column="0" Grid.Row="4"/>
 
             <Button Content="Следующая" Click="CustomPage6_Click" Background="#FFF6E8CD" Grid.Column="7" Grid.Row="4"/>
 
-            <Button x:Name="Play" Click="PlayMusic_Click" Grid.Column="4" Grid.Row="1">
+        <Button x:Name="Play" Click="PlayMusic_Click" Grid.Column="3" Grid.Row="4" BorderBrush="{x:Null}" Foreground="{x:Null}">
                 <Button.Effect>
                     <DropShadowEffect/>
                 </Button.Effect>
@@ -73,7 +70,7 @@
                     <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Interface\play.png" Stretch="Fill" TileMode="None"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="Stop" Click="StopMusic_Click" Height="70" Grid.Column="6" Grid.Row="1">
+        <Button x:Name="Stop" Click="StopMusic_Click" Grid.Column="4" Grid.Row="4" BorderBrush="{x:Null}" Foreground="{x:Null}">
                 <Button.Effect>
                     <DropShadowEffect/>
                 </Button.Effect>
@@ -81,22 +78,6 @@
                     <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Interface\stop.png" Stretch="Fill" TileMode="None"/>
                 </Button.Background>
             </Button>
-        <Button x:Name="Playy" Click="Play_Click" Grid.Column="4" Grid.Row="3">
-            <Button.Effect>
-                <DropShadowEffect/>
-            </Button.Effect>
-            <Button.Background>
-                <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Interface\voice_on.png" Stretch="Fill" TileMode="None"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="Stopp" Click="Stop_Click" Grid.Column="6" Grid.Row="3" >
-            <Button.Effect>
-                <DropShadowEffect/>
-            </Button.Effect>
-            <Button.Background>
-                <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Interface\voice_off.png" Stretch="Fill" TileMode="None"/>
-            </Button.Background>
-        </Button>
         <Frame x:Name="FrameCustom" Grid.ColumnSpan="8" Grid.RowSpan="5" />
     </Grid>
 </Page>

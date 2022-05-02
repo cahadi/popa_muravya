@@ -14,13 +14,10 @@ namespace Курсовая_T_T.ViewModels
         {
             get => currentPageControl.Page;
         }
-
-        public CommandVM RegistrationUser { get; set; }
-        public CommandVM ProfileUser { get; set; }
+        public CommandVM Registration { get; set; }
         public CommandVM EnterLobby { get; set; }
         public CommandVM ViewLobby { get; set; }
-        public CommandVM Information { get; set; }
-       
+        public CommandVM ViewInfo { get; set; }
 
         public MainVM()
         {
@@ -28,12 +25,9 @@ namespace Курсовая_T_T.ViewModels
 
              currentPageControl = new CurrentPageControl();
             currentPageControl.PageChanged += CurrentPageControl_PageChanged;
-
-            RegistrationUser = new CommandVM(() => {
-                currentPageControl.SetPage(new UserRegistrationPage(new RegistrationVM(currentPageControl)));
-            });
-            ProfileUser = new CommandVM(() => {
-                currentPageControl.SetPage(new UserProfilePage(null));
+            Registration = new CommandVM(() =>
+            {
+                currentPageControl.SetPage(new UserPage(new UserVM(currentPageControl)));
             });
             EnterLobby = new CommandVM(() => {
                 currentPageControl.SetPage(new EditLobbyPage(new EditLobbyVM(currentPageControl)));
@@ -41,7 +35,9 @@ namespace Курсовая_T_T.ViewModels
             ViewLobby = new CommandVM(() => {
                 currentPageControl.SetPage(new ViewLobbyPage());
             });
-
+            ViewInfo = new CommandVM(() => {
+                currentPageControl.SetPage(new InformationPage());
+            });
         }
 
         private void CurrentPageControl_PageChanged(object sender, EventArgs e)

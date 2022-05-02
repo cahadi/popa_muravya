@@ -61,22 +61,6 @@
 
             <Button Content="Следующая" Click="CustomPage5_Click" Background="#FFF6E8CD" Grid.Column="7" Grid.Row="4"/>
 
-            <Button x:Name="Play" Click="PlayMusic_Click" Grid.Column="5" Grid.Row="3">
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
-                <Button.Background>
-                    <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Interface\voice_on.png" Stretch="Fill" TileMode="None"/>
-                </Button.Background>
-            </Button>
-            <Button x:Name="Stop" Click="StopMusic_Click" Grid.Column="6" Grid.Row="3" >
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
-                <Button.Background>
-                    <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Interface\voice_off.png" Stretch="Fill" TileMode="None"/>
-                </Button.Background>
-            </Button>
         <Frame x:Name="FrameCustom" Grid.ColumnSpan="8" Grid.RowSpan="5" />
     </Grid>
 </Page>

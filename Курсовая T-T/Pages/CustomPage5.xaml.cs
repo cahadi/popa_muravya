@@ -50,18 +50,5 @@ namespace Курсовая_T_T.Pages
             SoundPlayer sp = new SoundPlayer();
             sp.Stop();
         }
-        private void Play_Click(object sender, RoutedEventArgs e)
-        {
-            SoundPlayer sp = new SoundPlayer();
-            sp.SoundLocation = "C:/Users/ap357/OneDrive/Рабочий стол/Курсовая/Курсовая T-T/Курсовая T-T/Озвучка страниц/Custom/CustomPage5.wav";
-            sp.Load();
-            sp.PlayLooping();
-        }
-
-        private void Stop_Click(object sender, RoutedEventArgs e)
-        {
-            SoundPlayer sp = new SoundPlayer();
-            sp.Stop();
-        }
     }
 }

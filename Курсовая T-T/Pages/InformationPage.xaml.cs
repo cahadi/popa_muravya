@@ -25,9 +25,5 @@ namespace Курсовая_T_T.Pages
             FrameInfo.Content = new HistoryPage();
         }
 
-        private void Bakc_Click(object sender, RoutedEventArgs e)
-        {
-            FrameInfo.Content = new MainWindow();
-        }
     }
 }

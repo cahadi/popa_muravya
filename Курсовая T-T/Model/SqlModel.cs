@@ -85,37 +85,64 @@ namespace Курсовая_T_T.Model
             return result;
         }
 
-        internal List<User> SelectUserByLobby(Lobby selectedLobby)
+        internal List<User> EnterUser()
         {
-            int id = selectedLobby?.ID ?? 0;
-            var user = new List<User>();
             var mySqlDB = MySqlDB.GetDB();
-            string query = $"SELECT * FROM `user` WHERE id_user = {id}";
+            var user = new List<User>();
+            string sql = "select 'id_user', 'login' from 'user'";
             if (mySqlDB.OpenConnection())
             {
-                using (MySqlCommand mc = new MySqlCommand(query, mySqlDB.sqlConnection))
+                using (MySqlCommand mc = new MySqlCommand(sql, mySqlDB.sqlConnection))
                 using (MySqlDataReader dr = mc.ExecuteReader())
                 {
                     while (dr.Read())
                     {
                         user.Add(new User
                         {
-                            ID = dr.GetInt32("id_user"),
-                            Name = dr.GetString("name"),
-                            LastName = dr.GetString("lastName")
+                            IdUser = dr.GetInt32("id_user"),
+                            Login = dr.GetString("login"),
+                            Password = dr.GetString("password")
                         });
                     }
                 }
                 mySqlDB.CloseConnection();
             }
             return user;
+
         }
 
+        internal List<User> Registration()
+        {
+            var mySqlDB = MySqlDB.GetDB();
+            var registration = new List<User>();
+            string sql = $"INSERT INTO `user`(`name`, `lastname`, `login`, `password`) VALUES";
+            if (mySqlDB.OpenConnection())
+            {
+                using (MySqlCommand mc = new MySqlCommand(sql, mySqlDB.sqlConnection))
+                using (MySqlDataReader dr = mc.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        registration.Add(new User
+                        {
+                            IdUser = dr.GetInt32("id_user"),
+                            Name = dr.GetString("name"),
+                            LastName = dr.GetString("lastName"),
+                            Login = dr.GetString("login"),
+                            Password = dr.GetString("password")
+                        });
+                    }
+                }
+                mySqlDB.CloseConnection();
+            }
+            return registration;
+        }
+        
         internal List<Tea> TeaList()
         {
             var mySqlDB = MySqlDB.GetDB();
             var result = new List<Tea>();
-            string sql = "select * from tea";
+            string sql = "SELECT * FROM `tea` order by sorts_of_tea";
             if (mySqlDB.OpenConnection())
             {
                 using (MySqlCommand mc = new MySqlCommand(sql, mySqlDB.sqlConnection))
@@ -136,31 +163,7 @@ namespace Курсовая_T_T.Model
             }
             return result;
         }
-        internal List<User> SelectUser()
-        {
-            var mySqlDB = MySqlDB.GetDB();
-            var result = new List<User>();
-            string sql = "select * from user";
-            if (mySqlDB.OpenConnection())
-            {
-                using (MySqlCommand mc = new MySqlCommand(sql, mySqlDB.sqlConnection))
-                using (MySqlDataReader dr = mc.ExecuteReader())
-                {
-                    while (dr.Read())
-                    {
-                        result.Add(new User
-                        {
-                            UserID = dr.GetInt32("id_user"),
-                            Name = dr.GetString("name"),
-                            LastName = dr.GetString("lastname")
-                        });
-                    }
-                }
-                mySqlDB.CloseConnection();
-            }
-            return result;
-        }
-
+        
         internal List<Tour> SelectTours()
         {
             var mySqlDB = MySqlDB.GetDB();

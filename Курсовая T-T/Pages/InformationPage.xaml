@@ -30,7 +30,7 @@
         </Grid.Background>
 
         <Label Content="История" Background="#FFB79878" Grid.Row="1" FontSize="18" FontFamily="Segoe Script" Grid.Column="1"/>
-        <Button x:Name="History" Click="History_Click" Grid.Row="0" Grid.Column="1" >
+        <Button x:Name="History" Click="History_Click" Grid.Row="0" Grid.Column="1" BorderBrush="{x:Null}" Foreground="{x:Null}" >
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -40,7 +40,7 @@
         </Button>
 
         <Label Content="Обычаи" Background="#FFB79878" Grid.Column="3" Grid.Row="1" FontSize="18" FontFamily="Segoe Script"/>
-        <Button x:Name="Custom" Click="Custom_Click" Grid.Column="3" Grid.Row="0">
+        <Button x:Name="Custom" Click="Custom_Click" Grid.Column="3" Grid.Row="0" BorderBrush="{x:Null}" Foreground="{x:Null}">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -50,7 +50,7 @@
         </Button>
 
         <Label Content="О чае" Background="#FFB79878" Grid.Column="5" Grid.Row="1" FontSize="18" FontFamily="Segoe Script"/>
-        <Button x:Name="Tea" Click="Tea_Click" Grid.Column="5" Grid.Row="0">
+        <Button x:Name="Tea" Click="Tea_Click" Grid.Column="5" Grid.Row="0" BorderBrush="{x:Null}" Foreground="{x:Null}">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -58,8 +58,6 @@
                 <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Interface\5523908.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="Back" Content="Вернуться" Click="Bakc_Click" Grid.Column="3" Grid.Row="4" Background="#FFF9EEC6" FontFamily="Segoe Print" FontSize="16"/>
-
         <Frame x:Name="FrameInfo" Grid.ColumnSpan="7" Grid.RowSpan="5" />
     </Grid>
 </Page>

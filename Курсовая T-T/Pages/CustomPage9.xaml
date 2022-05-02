@@ -34,7 +34,7 @@
             <LineBreak /> 
             разного количества предметов. Основные из них 
             <LineBreak /> 
-            видны на фото – это гайвани, чахай и пиалы.
+             – это гайвани, чахай и пиалы.
             <LineBreak /> 
 Гайвани – глиняный чайник для заваривания. 
             <LineBreak /> 
@@ -55,23 +55,6 @@
 
             <Button Content="Вернуться" Click="InformationPage_Click" Background="#FFF6E8CD" Grid.Column="7" Grid.Row="4"/>
 
-            <Button x:Name="Play" Click="PlayMusic_Click" Grid.Column="3" Grid.Row="3" >
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
-                <Button.Background>
-                    <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Interface\voice_on.png" Stretch="Fill" TileMode="None"/>
-                </Button.Background>
-            </Button>
-            <Button x:Name="Stop" Click="StopMusic_Click" Grid.Column="4" Grid.Row="3" >
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
-                <Button.Background>
-                    <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Interface\voice_off.png" Stretch="Fill" TileMode="None"/>
-                </Button.Background>
-            </Button>
         <Frame x:Name="FrameCustom" Grid.ColumnSpan="8" Grid.RowSpan="5" />
-        <Image Grid.Column="5" Grid.ColumnSpan="3" Grid.RowSpan="3" Source="/Images/CHai-naya-tseremoniya-v-Kitae-3-e1534487807386.jpg"/>
     </Grid>
 </Page>

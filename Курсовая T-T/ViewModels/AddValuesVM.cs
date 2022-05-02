@@ -22,7 +22,7 @@ namespace Курсовая_T_T.ViewModels
             set
             {
                 selectedLobby = value;
-                UserArray = SqlModel.GetInstance().SelectUserByLobby(selectedLobby);
+                UserArray = SqlModel.GetInstance().EnterUser();
             }
         }
         public User SelectedUser { get; set; }
