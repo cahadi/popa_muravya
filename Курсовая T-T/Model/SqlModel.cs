@@ -118,6 +118,124 @@ namespace Курсовая_T_T.Model
             return registration;
         }
         
+        internal List<Gids> DismissGids(Gids selectGids)
+        {
+            var Login = selectGids.Login;
+            var mySqlDB = MySqlDB.GetDB();
+            var result = new List<Gids>();
+            string sql = $"DELETE FROM `gids` WHERE 'login'='{Login}'";
+            if (mySqlDB.OpenConnection())
+            {
+                using (MySqlCommand mc = new MySqlCommand(sql, mySqlDB.sqlConnection))
+                using (MySqlDataReader dr = mc.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        result.Add(new Gids
+                        {
+                            IdGids = dr.GetInt32("id_gids"),
+                            Name = dr.GetString("name"),
+                            LastName = dr.GetString("lastname"),
+                            Email = dr.GetString("email"),
+                            Number = dr.GetInt32("number"),
+                            Login = dr.GetString("login"),
+                            Password = dr.GetString("password")
+                        });
+                    }
+                }
+                mySqlDB.CloseConnection();
+            }
+            return result;
+        }
+
+        internal List<Gids> RegistrationGids()
+        {
+            var mySqlDB = MySqlDB.GetDB();
+            var registrationGids = new List<Gids>();
+            string sql = $"INSERT INTO `gids` (`name`, `lastname`, `email`, `number`, `login`, `password`) VALUES";
+            if (mySqlDB.OpenConnection())
+            {
+                using (MySqlCommand mc = new MySqlCommand(sql, mySqlDB.sqlConnection))
+                using (MySqlDataReader dr = mc.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        registrationGids.Add(new Gids
+                        {
+                            IdGids = dr.GetInt32("id_gids"),
+                            Name = dr.GetString("name"),
+                            LastName = dr.GetString("lastname"),
+                            Email = dr.GetString("email"),
+                            Number = dr.GetInt32("number"),
+                            Login = dr.GetString("login"),
+                            Password = dr.GetString("password")
+                        });
+                    }
+                }
+                mySqlDB.CloseConnection();
+            }
+            return registrationGids;
+        }
+
+
+        internal List<User> UserList()
+        {
+            var mySqlDB = MySqlDB.GetDB();
+            var result = new List<User>();
+            string sql = "SELECT * FROM `user`";
+            if (mySqlDB.OpenConnection())
+            {
+                using (MySqlCommand mc = new MySqlCommand(sql, mySqlDB.sqlConnection))
+                using (MySqlDataReader dr = mc.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        result.Add(new User
+                        {
+                            IdUser = dr.GetInt32("id_user"),
+                            Name = dr.GetString("name"),
+                            LastName = dr.GetString("lastname"),
+                            Number = dr.GetInt32("number"),
+                            Login = dr.GetString("login"),
+                            Password = dr.GetString("password"),
+                            TypeOfTour = dr.GetString("typr_of_tour")
+                        });
+                    }
+                }
+                mySqlDB.CloseConnection();
+            }
+            return result;
+        }
+
+        internal List<Gids> GidsList()
+        {
+            var mySqlDB = MySqlDB.GetDB();
+            var result = new List<Gids>();
+            string sql = "SELECT * FROM `gids`";
+            if (mySqlDB.OpenConnection())
+            {
+                using (MySqlCommand mc = new MySqlCommand(sql, mySqlDB.sqlConnection))
+                using (MySqlDataReader dr = mc.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        result.Add(new Gids
+                        {
+                            IdGids = dr.GetInt32("id_gids"),
+                            Name = dr.GetString("name"),
+                            LastName = dr.GetString("lastname"),
+                            Email = dr.GetString("email"),
+                            Number = dr.GetInt32("number"),
+                            Login = dr.GetString("login"),
+                            Password = dr.GetString("password")
+                        });
+                    }
+                }
+                mySqlDB.CloseConnection();
+            }
+            return result;
+        }
+
         internal List<Tea> TeaList()
         {
             var mySqlDB = MySqlDB.GetDB();

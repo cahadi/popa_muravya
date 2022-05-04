@@ -38,7 +38,7 @@ namespace Курсовая_T_T.ViewModels
                     model.Insert(AdminEnter);
                 else
                     model.Update(AdminEnter);
-                currentPageControl.SetPage(new AdminPage());
+                currentPageControl.SetPage(new AdminPage(new AdminVM()));
             });
         }
     }

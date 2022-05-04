@@ -1,15 +1,14 @@
 ﻿using System.Windows.Controls;
 using Курсовая_T_T.ViewModels;
 
-
 namespace Курсовая_T_T.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для AdminPage.xaml
+    /// Логика взаимодействия для HireGidsPage.xaml
     /// </summary>
-    public partial class AdminPage : Page
+    public partial class HireGidsPage : Page
     {
-        public AdminPage(AdminVM vm)
+        public HireGidsPage(HireGidsVM vm)
         {
             InitializeComponent();
             DataContext = vm;

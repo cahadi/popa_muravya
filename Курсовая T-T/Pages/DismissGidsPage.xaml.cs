@@ -1,15 +1,14 @@
 ﻿using System.Windows.Controls;
 using Курсовая_T_T.ViewModels;
 
-
 namespace Курсовая_T_T.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для AdminPage.xaml
+    /// Логика взаимодействия для DismissGidsPage.xaml
     /// </summary>
-    public partial class AdminPage : Page
+    public partial class DismissGidsPage : Page
     {
-        public AdminPage(AdminVM vm)
+        public DismissGidsPage(DismissGidsVM vm)
         {
             InitializeComponent();
             DataContext = vm;
