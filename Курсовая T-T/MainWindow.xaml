@@ -8,7 +8,7 @@
         d:DesignHeight="450" d:DesignWidth="800" ResizeMode="NoResize"
         Icon="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\icon.png"
         Title="MainWindows">
-   
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="71*"/>
@@ -17,7 +17,9 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="90*"/>
             <RowDefinition Height="90*"/>
-            <RowDefinition Height="190*"/>
+            <RowDefinition Height="206*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
         </Grid.RowDefinitions>
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\background.png"/>
@@ -32,7 +34,7 @@
             </Button.Background>
         </Button>
 
-        <Button x:Name="Information"  Command="{Binding ViewInfo}" Grid.Row="1" Grid.Column="1" BorderBrush="{x:Null}" Foreground="{x:Null}">
+        <Button x:Name="Information"  Command="{Binding ViewInfo}" Grid.Column="1" BorderBrush="{x:Null}" Foreground="{x:Null}" Grid.Row="1">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -40,6 +42,9 @@
                 <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Interface\2400489.png"/>
             </Button.Background>
         </Button>
-        <Frame x:Name="Frame" Grid.Column="0" Grid.RowSpan="3" Content="{Binding CurrentPage}" NavigationUIVisibility="Hidden"/>
+
+        <Button x:Name="Gids" Content="G" Command="{Binding GidsProfile}" Grid.Column="1" Grid.Row="3" Background="#FFF4CFA2" BorderBrush="{x:Null}" />
+        <Button x:Name="Admin" Content="A" Command="{Binding AdminProfile}" Grid.Column="1" Grid.Row="4" Background="#FFF4CFA2" BorderBrush="{x:Null}"/>
+        <Frame x:Name="Frame" Grid.Column="0" Grid.RowSpan="5" Content="{Binding CurrentPage}" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

@@ -12,23 +12,16 @@ namespace Курсовая_T_T.ViewModels
 {
     class AddValuesVM: BaseVM
     {
-        private Lobby selectedLobby;
         public List<User> UserArray { get; set; }
         public List<Tour> TourArray { get; set; }
         public List<Lobby> LobbyArray { get; set;}
         public Tour SelectedTour { get; set; }
-        public Lobby SelectedLobby
-        { get => selectedLobby;
-            set
-            {
-                selectedLobby = value;
-                UserArray = SqlModel.GetInstance().EnterUser();
-            }
-        }
+        public Gids SelectGids { get; set; }
         public User SelectedUser { get; set; }
         public DateTime Day { get; set; }
         public string Value { get; set; }
         public CommandVM SaveValue { get; set; }
+
         public AddValuesVM()
         {
             var db = SqlModel.GetInstance();

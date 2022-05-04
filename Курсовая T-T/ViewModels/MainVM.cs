@@ -15,9 +15,9 @@ namespace Курсовая_T_T.ViewModels
             get => currentPageControl.Page;
         }
         public CommandVM Registration { get; set; }
-        public CommandVM EnterLobby { get; set; }
-        public CommandVM ViewLobby { get; set; }
         public CommandVM ViewInfo { get; set; }
+        public CommandVM GidsProfile { get; set; }
+        public CommandVM AdminProfile { get; set; }
 
         public MainVM()
         {
@@ -29,14 +29,14 @@ namespace Курсовая_T_T.ViewModels
             {
                 currentPageControl.SetPage(new UserPage(new UserVM(currentPageControl)));
             });
-            EnterLobby = new CommandVM(() => {
-                currentPageControl.SetPage(new EditLobbyPage(new EditLobbyVM(currentPageControl)));
-            });
-            ViewLobby = new CommandVM(() => {
-                currentPageControl.SetPage(new ViewLobbyPage());
-            });
             ViewInfo = new CommandVM(() => {
                 currentPageControl.SetPage(new InformationPage());
+            });
+            GidsProfile = new CommandVM(() => {
+                currentPageControl.SetPage(new GidsProfilePage(new GidsProfileVM(currentPageControl)));
+            });
+            AdminProfile = new CommandVM(() => {
+                currentPageControl.SetPage(new AdminProfilePage(new AdminProfileVM(currentPageControl)));
             });
         }
 

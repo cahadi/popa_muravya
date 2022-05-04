@@ -20,86 +20,38 @@ namespace Курсовая_T_T.Model
             return sqlModel;
         }
 
-        public List<Lobby> SelectLobbyRange(int skip, int count)
+        public List<Tour> SelectTourRange(int skip, int count)
         {
-            var lobby = new List<Lobby>();
+            var tour = new List<Tour>();
             var mySqlDB = MySqlDB.GetDB();
-            string query = $"SELECT * FROM `lobby` LIMIT {skip},{count}";
+            string query = $"SELECT * FROM `tour` LIMIT {skip},{count}";
             if (mySqlDB.OpenConnection())
             {
                 using (MySqlCommand mc = new MySqlCommand(query, mySqlDB.sqlConnection));            }
-            return lobby;
+            return tour;
         }
-        internal int SelectCountUsersInLobby(Lobby lobby)
+
+        internal List<Gids> GidsEnter(Gids selectGids)
         {
-            int result = 0;
+            var login = selectGids.Login;
+            var password = selectGids.Password;
+            var gids = new List<Gids>();
             var mySqlDB = MySqlDB.GetDB();
-            string query = $"SELECT count(*) FROM user WHERE id lobby = " + lobby.ID;
+            string query = $"SELECT * FROM `gids` WHERE login = '{login}' and password = '{password}'";
             if (mySqlDB.OpenConnection())
             {
                 using (MySqlCommand mc = new MySqlCommand(query, mySqlDB.sqlConnection))
                 using (MySqlDataReader dr = mc.ExecuteReader())
                 {
-                    if (dr.Read())
-                    {
-                        result = dr.GetInt32(0);
-                    }
-                }
-                mySqlDB.CloseConnection();
-            }
-            return result;
-        }
-
-        internal Dictionary<Tour, List<Lobby>> SelectLobbyByTour(List<Tour> tours, int month, int year)
-        {
-            Dictionary<Tour, List<Lobby>> result = new Dictionary<Tour, List<Lobby>>();
-            var mySqlDB = MySqlDB.GetDB();
-            DateTime startDate = new DateTime(year, month, 1);
-            DateTime endDate = new DateTime(year, month, DateTime.DaysInMonth(year, month));
-            string tourIds = string.Join(",", tours.Select(u => u.ID));
-            string query = $"SELECT * FROM lobby l, user u WHERE l.id_tour IN ({tourIds}) and l.day >= '{startDate.ToShortDateString()}' and l.day <= '{endDate.ToShortDateString()}' AND l.id_user = u.id";
-            if (mySqlDB.OpenConnection())
-            {
-                foreach (var tour in tours)
-                {
-                    List<Lobby> eTour = new List<Lobby>();
-                    result.Add(tour, eTour);
-                }
-                using (MySqlCommand mc = new MySqlCommand(query, mySqlDB.sqlConnection))
-                using (MySqlDataReader dr = mc.ExecuteReader())
-                {
                     while (dr.Read())
                     {
-                        int tourId = dr.GetInt32("id_tour");
-                        var tExcursion = result.First(u => u.Key.ID == tourId);
-                        tExcursion.Value.Add(new Lobby
+                        gids.Add(new Gids
                         {
-                            IdTour = tourId,
-                            IdUser = dr.GetInt32("id_user"),
-                            Day = dr.GetDateTime("day")
-                        });
-                    }
-                }
-                mySqlDB.CloseConnection();
-            }
-            return result;
-        }
-
-        internal List<User> EnterUser()
-        {
-            var mySqlDB = MySqlDB.GetDB();
-            var user = new List<User>();
-            string sql = "select 'id_user', 'login' from 'user'";
-            if (mySqlDB.OpenConnection())
-            {
-                using (MySqlCommand mc = new MySqlCommand(sql, mySqlDB.sqlConnection))
-                using (MySqlDataReader dr = mc.ExecuteReader())
-                {
-                    while (dr.Read())
-                    {
-                        user.Add(new User
-                        {
-                            IdUser = dr.GetInt32("id_user"),
+                            IdGids = dr.GetInt32("id_gids"),
+                            Name = dr.GetString("name"),
+                            LastName = dr.GetString("lastname"),
+                            Email = dr.GetString("email"),
+                            Number = dr.GetInt32("number"),
                             Login = dr.GetString("login"),
                             Password = dr.GetString("password")
                         });
@@ -107,15 +59,42 @@ namespace Курсовая_T_T.Model
                 }
                 mySqlDB.CloseConnection();
             }
-            return user;
+            return gids;
+        }
 
+        internal List<Admin> AdminEnter(Admin selectAdmin)
+        {
+            var login = selectAdmin.Login;
+            var password = selectAdmin.Password;
+            var admin = new List<Admin>();
+            var mySqlDB = MySqlDB.GetDB();
+            string query = $"SELECT * FROM `admin` WHERE login = '{login}' and password = '{password}'";
+            if (mySqlDB.OpenConnection())
+            {
+                using (MySqlCommand mc = new MySqlCommand(query, mySqlDB.sqlConnection))
+                using (MySqlDataReader dr = mc.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        admin.Add(new Admin
+                        {
+                            Name = dr.GetString("name"),
+                            LastName = dr.GetString("lastname"),
+                            Login = dr.GetString("login"),
+                            Password = dr.GetString("password")
+                        });
+                    }
+                }
+                mySqlDB.CloseConnection();
+            }
+            return admin;
         }
 
         internal List<User> Registration()
         {
             var mySqlDB = MySqlDB.GetDB();
             var registration = new List<User>();
-            string sql = $"INSERT INTO `user`(`name`, `lastname`, `login`, `password`) VALUES";
+            string sql = $"INSERT INTO `user` (`name`, `lastname`, `login`, `password`) VALUES";
             if (mySqlDB.OpenConnection())
             {
                 using (MySqlCommand mc = new MySqlCommand(sql, mySqlDB.sqlConnection))
@@ -128,6 +107,7 @@ namespace Курсовая_T_T.Model
                             IdUser = dr.GetInt32("id_user"),
                             Name = dr.GetString("name"),
                             LastName = dr.GetString("lastName"),
+                            Number = dr.GetInt32("number"),
                             Login = dr.GetString("login"),
                             Password = dr.GetString("password")
                         });
@@ -168,7 +148,7 @@ namespace Курсовая_T_T.Model
         {
             var mySqlDB = MySqlDB.GetDB();
             var result = new List<Tour>();
-            string sql = "select id_tour, tipe_of_tour from tour";
+            string sql = "select tipe_of_tour from tour";
             if (mySqlDB.OpenConnection())
             {
                 using (MySqlCommand mc = new MySqlCommand(sql, mySqlDB.sqlConnection))

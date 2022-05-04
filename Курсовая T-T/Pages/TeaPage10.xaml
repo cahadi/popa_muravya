@@ -47,7 +47,7 @@
             <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\background-3.png"/>
         </Grid.Background>
 
-        <ListView Background="#FFD7D2B1" BorderBrush="#FFD7D2B1" Foreground="White"
+        <ListView Background="#FFD7D2B1" BorderBrush="#FFD7D2B1" Foreground="Black"
                   ItemsSource="{Binding TeaList}" Grid.Column="2" Grid.ColumnSpan="4" Grid.RowSpan="19">
             <ListView.View>
                 <GridView>

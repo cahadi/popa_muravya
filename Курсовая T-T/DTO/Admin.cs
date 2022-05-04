@@ -10,6 +10,10 @@ namespace Курсовая_T_T.DTO
     [Table("admin")]
     public class Admin : BaseDTO
     {
+        [Column("name")]
+        public string Name { get; set; }
+        [Column("lastname")]
+        public string LastName { get; set; }
         [Column("login")]
         public string Login { get; set; }
         [Column("password")]
