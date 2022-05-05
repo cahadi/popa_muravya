@@ -32,10 +32,10 @@
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\1612153027_180-p-cherno-fioletovii-fon-minimalizm-oboi-na-a-232.jpg"/>
         </Grid.Background>
-        <Label Content="Здравствуйте! Сегодня уволняем кого-то?" Grid.ColumnSpan="4"  Background="#FF705284" FontFamily="Segoe Script" FontSize="18"/>
-        <Button x:Name="DismissGids" Content="Уволить" Command="{Binding DismissGids}" Grid.Column="0" Grid.Row="2"  Background="#FF705284" FontFamily="Segoe Print" FontSize="16" BorderBrush="{x:Null}"/>
-        <Button x:Name="HireGids" Content="Нанять" Command="{Binding HireGids}" Grid.Column="0" Grid.Row="4"  Background="#FF705284" FontFamily="Segoe Print" FontSize="16" BorderBrush="{x:Null}"/>
-        <Button x:Name="ListGids" Content="Гиды" Command="{Binding ListGids}" Grid.Column="0" Grid.Row="6" Background="#FF705284" FontFamily="Segoe Print" FontSize="16"/>
-        <Button x:Name="ListLobby" Content="Лобби" Command="{Binding ListLobby}" Grid.Column="0" Grid.Row="8" Background="#FF705284" FontFamily="Segoe Print" FontSize="16" BorderBrush="{x:Null}"/>
+        <Label Content="Здравствуйте! Сегодня увольняем кого-то?" Grid.ColumnSpan="4"  Background="#FF705284" FontFamily="Segoe Script" FontSize="18"/>
+        <Button x:Name="DismissGids" Content="Уволить" Command="{Binding Dismiss}" Grid.Column="0" Grid.Row="2"  Background="#FF705284" FontFamily="Segoe Print" FontSize="16" BorderBrush="{x:Null}"/>
+        <Button x:Name="HireGids" Content="Нанять" Command="{Binding Hire}" Grid.Column="0" Grid.Row="4"  Background="#FF705284" FontFamily="Segoe Print" FontSize="16" BorderBrush="{x:Null}"/>
+        <Button x:Name="ListGids" Content="Гиды" Command="{Binding ListG}" Grid.Column="0" Grid.Row="6" Background="#FF705284" FontFamily="Segoe Print" FontSize="16"/>
+        <Button x:Name="ListLobby" Content="Лобби" Command="{Binding ListL}" Grid.Column="0" Grid.Row="8" Background="#FF705284" FontFamily="Segoe Print" FontSize="16" BorderBrush="{x:Null}"/>
     </Grid>
 </Page>

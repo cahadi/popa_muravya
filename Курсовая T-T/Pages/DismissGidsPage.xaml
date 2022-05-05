@@ -32,11 +32,11 @@
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\1612153027_180-p-cherno-fioletovii-fon-minimalizm-oboi-na-a-232.jpg"/>
         </Grid.Background>
-        <StackPanel Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="2" Grid.RowSpan="5" Background="#FF705284" >
+        <StackPanel DataContext="{Binding DismissGids}"  Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="2" Grid.RowSpan="5" Background="#FF705284" >
             <Label Content="Введите логин гида, которого хотите уволить" FontFamily="Segoe Print" FontSize="16"/>
             <TextBox x:Name="Login" Text="{Binding Login}"/>
         </StackPanel>
-        <Button x:Name="Dismiss" Content="Уволить" Command="{Binding DismissGids}" Grid.Column="1" Grid.Row="5" FontFamily="Segoe Print" FontSize="16" BorderBrush="{x:Null}" Background="#FFA588B8"/>
+        <Button x:Name="Dismiss" Content="Уволить" Command="{Binding DismissG}" Grid.Column="1" Grid.Row="5" FontFamily="Segoe Print" FontSize="16" BorderBrush="{x:Null}" Background="#FFA588B8"/>
         <Button x:Name="Back" Content="Отмена" Command="{Binding Back}" Grid.Column="4" Grid.Row="5" FontFamily="Segoe Print" FontSize="16" BorderBrush="{x:Null}" Background="#FFA588B8"/>
     </Grid>
 </Page>

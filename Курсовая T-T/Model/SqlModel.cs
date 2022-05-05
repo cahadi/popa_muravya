@@ -31,13 +31,13 @@ namespace Курсовая_T_T.Model
             return tour;
         }
 
-        internal List<Gids> GidsEnter(Gids selectGids)
+        internal List<Gids> GidsEnter(Gids SelectGids)
         {
-            var login = selectGids.Login;
-            var password = selectGids.Password;
+            var Login = SelectGids.Login;
+            var Password = SelectGids.Password;
             var gids = new List<Gids>();
             var mySqlDB = MySqlDB.GetDB();
-            string query = $"SELECT * FROM `gids` WHERE login = '{login}' and password = '{password}'";
+            string query = $"SELECT * FROM `gids` WHERE login = '{Login}' and password = '{Password}'";
             if (mySqlDB.OpenConnection())
             {
                 using (MySqlCommand mc = new MySqlCommand(query, mySqlDB.sqlConnection))
@@ -62,13 +62,13 @@ namespace Курсовая_T_T.Model
             return gids;
         }
 
-        internal List<Admin> AdminEnter(Admin selectAdmin)
+        internal List<Admin> AdminEnter(Admin SelectAdmin)
         {
-            var login = selectAdmin.Login;
-            var password = selectAdmin.Password;
+            var Login = SelectAdmin.Login;
+            var Password = SelectAdmin.Password;
             var admin = new List<Admin>();
             var mySqlDB = MySqlDB.GetDB();
-            string query = $"SELECT * FROM `admin` WHERE login = '{login}' and password = '{password}'";
+            string query = $"SELECT * FROM `admin` WHERE login = '{Login}' and password = '{Password}'";
             if (mySqlDB.OpenConnection())
             {
                 using (MySqlCommand mc = new MySqlCommand(query, mySqlDB.sqlConnection))

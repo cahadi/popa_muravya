@@ -37,7 +37,7 @@ namespace Курсовая_T_T.ViewModels
                     model.Insert(GidsEnter);
                 else
                     model.Update(GidsEnter);
-                currentPageControl.SetPage(new GidsPage());
+                currentPageControl.SetPage(new GidsPage(new GidsVM()));
             });
         }
     }

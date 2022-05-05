@@ -10,23 +10,35 @@ namespace Курсовая_T_T.ViewModels
 {
     public class DismissGidsVM : BaseVM
     {
-        public CommandVM Back;
-
-        private List<Gids> dismissGids;
-        public List<Gids> DismissGids
-        {
-            get => dismissGids;
-            set
-            {
-                dismissGids = value;
-                Signal();
-            }
-        }
+        public Gids DismissGids { get; set; }
+        public CommandVM DismissG { get; set; }
+        public CommandVM Back { get; set; }
 
         private CurrentPageControl currentPageControl;
-        public Page CurrentPage
+
+        public DismissGidsVM(CurrentPageControl currentPageControl)
         {
-            get => currentPageControl.Page;
+            this.currentPageControl = currentPageControl;
+            DismissGids = new Gids();
+            Init();
+        }
+        public DismissGidsVM(Gids dismissGids, CurrentPageControl currentPageControl)
+        {
+            this.currentPageControl = currentPageControl;
+            DismissGids = dismissGids;
+            Init();
+        }
+
+        private void Init()
+        {
+            DismissG = new CommandVM(() => {
+                var model = SqlModel.GetInstance();
+                if (DismissGids.ID == 0)
+                    model.Insert(DismissGids);
+                else
+                    model.Update(DismissGids);
+                currentPageControl.Back();
+            });
         }
 
         public DismissGidsVM()
@@ -38,6 +50,11 @@ namespace Курсовая_T_T.ViewModels
             {
                 currentPageControl.SetPage(new AdminPage(new AdminVM()));
             });
+        }
+
+        public Page CurrentPage
+        {
+            get => currentPageControl.Page;
         }
 
         private void CurrentPageControl_PageChanged(object sender, EventArgs e)

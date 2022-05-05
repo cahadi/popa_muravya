@@ -27,6 +27,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\fon.png"/>
         </Grid.Background>
+        <Button x:Name="Lobby" Content="Лобби" Command="{Binding ListL}" Grid.Column="0" Grid.Row="1" Background="#FF63B1F9" FontFamily="Segoe Script" FontSize="16" BorderBrush="{x:Null}"/>
         
     </Grid>
 </Page>

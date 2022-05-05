@@ -9,10 +9,10 @@ namespace Курсовая_T_T.ViewModels
 {
     public class AdminVM : BaseVM
     {
-        public CommandVM DismissGids { get; set; }
-        public CommandVM HireGids { get; set; }
-        public CommandVM ListGids { get; set; }
-        public CommandVM ListLobby { get; set; }
+        public CommandVM Dismiss { get; set; }
+        public CommandVM Hire { get; set; }
+        public CommandVM ListG { get; set; }
+        public CommandVM ListL { get; set; }
 
 
         private CurrentPageControl currentPageControl;
@@ -28,17 +28,17 @@ namespace Курсовая_T_T.ViewModels
             currentPageControl = new CurrentPageControl();
             currentPageControl.PageChanged += CurrentPageControl_PageChanged;
 
-            DismissGids = new CommandVM(() =>
+            Dismiss = new CommandVM(() =>
             {
-                currentPageControl.SetPage(new DismissGidsPage(new DismissGidsVM()));
+                currentPageControl.SetPage(new DismissGidsPage(new DismissGidsVM(currentPageControl)));
             });
-            HireGids = new CommandVM(() => {
+            Hire = new CommandVM(() => {
                 currentPageControl.SetPage(new HireGidsPage(new HireGidsVM(currentPageControl)));
             });
-            ListGids = new CommandVM(() => {
+            ListG = new CommandVM(() => {
                 currentPageControl.SetPage(new ListGidsPage(new ListGidsVM()));
             });
-            ListLobby = new CommandVM(() => {
+            ListL = new CommandVM(() => {
                 currentPageControl.SetPage(new ListLobbyPage(new ListLobbyVM()));
             });
         }

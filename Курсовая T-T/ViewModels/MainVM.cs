@@ -16,8 +16,8 @@ namespace Курсовая_T_T.ViewModels
         }
         public CommandVM Registration { get; set; }
         public CommandVM ViewInfo { get; set; }
-        public CommandVM GidsProfile { get; set; }
-        public CommandVM AdminProfile { get; set; }
+        public CommandVM GidsProf { get; set; }
+        public CommandVM AdminProf { get; set; }
 
         public MainVM()
         {
@@ -32,10 +32,10 @@ namespace Курсовая_T_T.ViewModels
             ViewInfo = new CommandVM(() => {
                 currentPageControl.SetPage(new InformationPage());
             });
-            GidsProfile = new CommandVM(() => {
+            GidsProf = new CommandVM(() => {
                 currentPageControl.SetPage(new GidsProfilePage(new GidsProfileVM(currentPageControl)));
             });
-            AdminProfile = new CommandVM(() => {
+            AdminProf = new CommandVM(() => {
                 currentPageControl.SetPage(new AdminProfilePage(new AdminProfileVM(currentPageControl)));
             });
         }

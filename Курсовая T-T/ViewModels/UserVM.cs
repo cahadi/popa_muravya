@@ -36,7 +36,7 @@ namespace Курсовая_T_T.ViewModels
             this.currentPageControl = currentPageControl;
             Registration = registration;
             Init();
-            SelectTours = Tours.FirstOrDefault(u => u.ID == registration.IdTour);
+            SelectTours = Tours.FirstOrDefault(t => t.TypeOfTour == registration.TypeOfTour);
         }
 
         private void Init()
@@ -48,7 +48,7 @@ namespace Курсовая_T_T.ViewModels
                     System.Windows.MessageBox.Show("Нужно выбрать тип тура для продолжения");
                     return;
                 }
-                Registration.IdTour = SelectTours.ID;
+                Registration.TypeOfTour = SelectTours.TypeOfTour;
                 var model = SqlModel.GetInstance();
                 if (Registration.ID == 0)
                     model.Insert(Registration);

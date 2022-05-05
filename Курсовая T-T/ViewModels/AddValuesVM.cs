@@ -18,6 +18,7 @@ namespace Курсовая_T_T.ViewModels
         public Tour SelectedTour { get; set; }
         public Gids SelectGids { get; set; }
         public User SelectedUser { get; set; }
+        public Admin SelectAdmin { get; set; }
         public DateTime Day { get; set; }
         public string Value { get; set; }
         public CommandVM SaveValue { get; set; }

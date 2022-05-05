@@ -43,8 +43,8 @@
             </Button.Background>
         </Button>
 
-        <Button x:Name="Gids" Content="G" Command="{Binding GidsProfile}" Grid.Column="1" Grid.Row="3" Background="#FFF4CFA2" BorderBrush="{x:Null}" />
-        <Button x:Name="Admin" Content="A" Command="{Binding AdminProfile}" Grid.Column="1" Grid.Row="4" Background="#FFF4CFA2" BorderBrush="{x:Null}"/>
+        <Button x:Name="Gids" Content="G" Command="{Binding GidsProf}" Grid.Column="1" Grid.Row="3" Background="#FFF4CFA2" BorderBrush="{x:Null}" />
+        <Button x:Name="Admin" Content="A" Command="{Binding AdminProf}" Grid.Column="1" Grid.Row="4" Background="#FFF4CFA2" BorderBrush="{x:Null}"/>
         <Frame x:Name="Frame" Grid.Column="0" Grid.RowSpan="5" Content="{Binding CurrentPage}" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
