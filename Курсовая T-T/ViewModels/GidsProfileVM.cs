@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Курсовая_T_T.DTO;
+﻿using Курсовая_T_T.DTO;
 using Курсовая_T_T.Model;
 using Курсовая_T_T.Tools;
 using Курсовая_T_T.Pages;
@@ -37,7 +32,7 @@ namespace Курсовая_T_T.ViewModels
                     model.Insert(GidsEnter);
                 else
                     model.Update(GidsEnter);
-                currentPageControl.SetPage(new GidsPage(new GidsVM()));
+                currentPageControl.SetPage(new GidsPage());
             });
         }
     }

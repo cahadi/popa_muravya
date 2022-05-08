@@ -37,6 +37,5 @@
             <TextBox x:Name="Login" Text="{Binding Login}"/>
         </StackPanel>
         <Button x:Name="Dismiss" Content="Уволить" Command="{Binding DismissG}" Grid.Column="1" Grid.Row="5" FontFamily="Segoe Print" FontSize="16" BorderBrush="{x:Null}" Background="#FFA588B8"/>
-        <Button x:Name="Back" Content="Отмена" Command="{Binding Back}" Grid.Column="4" Grid.Row="5" FontFamily="Segoe Print" FontSize="16" BorderBrush="{x:Null}" Background="#FFA588B8"/>
     </Grid>
 </Page>

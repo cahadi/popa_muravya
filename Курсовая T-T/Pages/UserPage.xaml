@@ -27,8 +27,8 @@
             </StackPanel>
             <Label Content="Тип экскурсии"/>
             <ComboBox ItemsSource="{Binding Tour}"
-                  SelectedItem="{Binding SelectTours}"
-                  DisplayMemberPath="TypeOfTour"/>
+                  SelectedItem="{Binding SelectedTour}"
+                  DisplayMemberPath="IdTour"/>
             <Button Content="Сохранить" Command="{Binding SaveUser}"/>
         </StackPanel>
         <Frame x:Name="Frame" NavigationUIVisibility="Hidden"/>

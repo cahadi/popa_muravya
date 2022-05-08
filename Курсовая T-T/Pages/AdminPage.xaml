@@ -32,10 +32,11 @@
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\1612153027_180-p-cherno-fioletovii-fon-minimalizm-oboi-na-a-232.jpg"/>
         </Grid.Background>
-        <Label Content="Здравствуйте! Сегодня увольняем кого-то?" Grid.ColumnSpan="4"  Background="#FF705284" FontFamily="Segoe Script" FontSize="18"/>
-        <Button x:Name="DismissGids" Content="Уволить" Command="{Binding Dismiss}" Grid.Column="0" Grid.Row="2"  Background="#FF705284" FontFamily="Segoe Print" FontSize="16" BorderBrush="{x:Null}"/>
-        <Button x:Name="HireGids" Content="Нанять" Command="{Binding Hire}" Grid.Column="0" Grid.Row="4"  Background="#FF705284" FontFamily="Segoe Print" FontSize="16" BorderBrush="{x:Null}"/>
-        <Button x:Name="ListGids" Content="Гиды" Command="{Binding ListG}" Grid.Column="0" Grid.Row="6" Background="#FF705284" FontFamily="Segoe Print" FontSize="16"/>
-        <Button x:Name="ListLobby" Content="Лобби" Command="{Binding ListL}" Grid.Column="0" Grid.Row="8" Background="#FF705284" FontFamily="Segoe Print" FontSize="16" BorderBrush="{x:Null}"/>
+        <Label Content="Здравствуйте! Сегодня увольняем кого-то?" Grid.Column="1" Grid.ColumnSpan="4"  Background="#FF705284" FontFamily="Segoe Script" FontSize="18"/>
+        <Button x:Name="Dismiss" Content="Уволить" Click="Dismiss_Click" Grid.Column="0" Grid.Row="1"  Background="#FF705284" FontFamily="Segoe Print" FontSize="16" BorderBrush="{x:Null}"/>
+        <Button x:Name="Hire" Content="Нанять" Click="Hire_Click" Grid.Column="0" Grid.Row="3"  Background="#FF705284" FontFamily="Segoe Print" FontSize="16" BorderBrush="{x:Null}"/>
+        <Button x:Name="ListG" Content="Гиды" Click="ListG_Click" Grid.Column="0" Grid.Row="5" Background="#FF705284" FontFamily="Segoe Print" FontSize="16"/>
+        <Button x:Name="ListL" Content="Лобби" Click="ListL_Click" Grid.Column="0" Grid.Row="7" Background="#FF705284" FontFamily="Segoe Print" FontSize="16" BorderBrush="{x:Null}"/>
+        <Frame x:Name="Frame" Grid.Column="1" Grid.ColumnSpan="6" Grid.RowSpan="9"/>
     </Grid>
 </Page>

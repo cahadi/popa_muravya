@@ -27,17 +27,18 @@ namespace Курсовая_T_T.Model
             string query = $"SELECT * FROM `tour` LIMIT {skip},{count}";
             if (mySqlDB.OpenConnection())
             {
-                using (MySqlCommand mc = new MySqlCommand(query, mySqlDB.sqlConnection));            }
+                using (MySqlCommand mc = new MySqlCommand(query, mySqlDB.sqlConnection));            
+            }
             return tour;
         }
 
         internal List<Gids> GidsEnter(Gids SelectGids)
         {
-            var Login = SelectGids.Login;
-            var Password = SelectGids.Password;
+            var login = SelectGids.Login;
+            var password = SelectGids.Password;
             var gids = new List<Gids>();
             var mySqlDB = MySqlDB.GetDB();
-            string query = $"SELECT * FROM `gids` WHERE login = '{Login}' and password = '{Password}'";
+            string query = $"SELECT * FROM `gids` WHERE `login` = `{login}` and `password` = `{password}`";
             if (mySqlDB.OpenConnection())
             {
                 using (MySqlCommand mc = new MySqlCommand(query, mySqlDB.sqlConnection))
@@ -64,11 +65,11 @@ namespace Курсовая_T_T.Model
 
         internal List<Admin> AdminEnter(Admin SelectAdmin)
         {
-            var Login = SelectAdmin.Login;
-            var Password = SelectAdmin.Password;
+            var login = SelectAdmin.Login;
+            var password = SelectAdmin.Password;
             var admin = new List<Admin>();
             var mySqlDB = MySqlDB.GetDB();
-            string query = $"SELECT * FROM `admin` WHERE login = '{Login}' and password = '{Password}'";
+            string query = $"SELECT * FROM `admin` WHERE `login` = `{login}` and `password` = `{password}`";
             if (mySqlDB.OpenConnection())
             {
                 using (MySqlCommand mc = new MySqlCommand(query, mySqlDB.sqlConnection))
@@ -117,7 +118,32 @@ namespace Курсовая_T_T.Model
             }
             return registration;
         }
-        
+
+        internal List<Group> AddGroup()
+        {
+            var mySqlDB = MySqlDB.GetDB();
+            var addgroup = new List<Group>();
+            string sql = $"INSERT INTO `group` (`login_gid`, `login_user`) VALUES";
+            if (mySqlDB.OpenConnection())
+            {
+                using (MySqlCommand mc = new MySqlCommand(sql, mySqlDB.sqlConnection))
+                using (MySqlDataReader dr = mc.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        addgroup.Add(new Group
+                        {
+                            IdGroup = dr.GetInt32("id_group"),
+                            LoginGid = dr.GetString("login_gid"),
+                            LoginUser = dr.GetString("login_user")
+                        });
+                    }
+                }
+                mySqlDB.CloseConnection();
+            }
+            return addgroup;
+        }
+
         internal List<Gids> DismissGids(Gids selectGids)
         {
             var Login = selectGids.Login;
@@ -198,7 +224,7 @@ namespace Курсовая_T_T.Model
                             Number = dr.GetInt32("number"),
                             Login = dr.GetString("login"),
                             Password = dr.GetString("password"),
-                            TypeOfTour = dr.GetString("typr_of_tour")
+                            IdTour = dr.GetInt32("id_tour")
                         });
                     }
                 }
@@ -210,7 +236,7 @@ namespace Курсовая_T_T.Model
         internal List<Gids> GidsList()
         {
             var mySqlDB = MySqlDB.GetDB();
-            var result = new List<Gids>();
+            var result = new List<Gids>(); 
             string sql = "SELECT * FROM `gids`";
             if (mySqlDB.OpenConnection())
             {
@@ -261,29 +287,35 @@ namespace Курсовая_T_T.Model
             }
             return result;
         }
-        
-        internal List<Tour> SelectTours()
+
+        internal List<User> SelectUserByTour(Tour selectedTour)
         {
+            int id = selectedTour?.ID ?? 0;
+            var users = new List<User>();
             var mySqlDB = MySqlDB.GetDB();
-            var result = new List<Tour>();
-            string sql = "select tipe_of_tour from tour";
+            string query = $"SELECT * FROM `user` WHERE id_tour = {id}";
             if (mySqlDB.OpenConnection())
             {
-                using (MySqlCommand mc = new MySqlCommand(sql, mySqlDB.sqlConnection))
+                using (MySqlCommand mc = new MySqlCommand(query, mySqlDB.sqlConnection))
                 using (MySqlDataReader dr = mc.ExecuteReader())
                 {
                     while (dr.Read())
                     {
-                        result.Add(new Tour
+                        users.Add(new User
                         {
-                            IdTour = dr.GetInt32("id_tour"),
-                            TypeOfTour = dr.GetString("tipe_of_tour")
-                        });
+                            ID = dr.GetInt32("id"),
+                            Name = dr.GetString("name"),
+                            LastName = dr.GetString("lastname"),
+                            Number = dr.GetInt32("number"),
+                            Login = dr.GetString("login"),
+                            Password = dr.GetString("password"),
+                            IdTour = dr.GetInt32("id_tour")
+                        }) ;
                     }
                 }
                 mySqlDB.CloseConnection();
             }
-            return result;
+            return users;
         }
 
         public int Insert<T>(T value)

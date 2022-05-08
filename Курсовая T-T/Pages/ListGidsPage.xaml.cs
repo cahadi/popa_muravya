@@ -21,10 +21,10 @@ namespace Курсовая_T_T.Pages
     /// </summary>
     public partial class ListGidsPage : Page
     {
-        public ListGidsPage(ListGidsVM vm)
+        public ListGidsPage()
         {
             InitializeComponent();
-            DataContext = vm;
+            DataContext = new ListGidsVM();
         }
     }
 }

@@ -21,10 +21,10 @@ namespace Курсовая_T_T.Pages
     /// </summary>
     public partial class ListLobbyPage : Page
     {
-        public ListLobbyPage(ListLobbyVM vm)
+        public ListLobbyPage()
         {
             InitializeComponent();
-            DataContext = vm;
+            DataContext = new ListLobbyVM();
         }
     }
 }

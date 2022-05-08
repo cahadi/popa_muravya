@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Курсовая_T_T.DTO;
+﻿using Курсовая_T_T.DTO;
 using Курсовая_T_T.Model;
 using Курсовая_T_T.Tools;
 using Курсовая_T_T.Pages;
@@ -16,7 +11,6 @@ namespace Курсовая_T_T.ViewModels
         public CommandVM EnterAdmin { get; set; }
 
         private CurrentPageControl currentPageControl;
-
         public AdminProfileVM(CurrentPageControl currentPageControl)
         {
             this.currentPageControl = currentPageControl;
@@ -38,7 +32,7 @@ namespace Курсовая_T_T.ViewModels
                     model.Insert(AdminEnter);
                 else
                     model.Update(AdminEnter);
-                currentPageControl.SetPage(new AdminPage(new AdminVM()));
+                currentPageControl.SetPage(new AdminPage());
             });
         }
     }

@@ -40,26 +40,5 @@ namespace Курсовая_T_T.ViewModels
                 currentPageControl.Back();
             });
         }
-
-        public DismissGidsVM()
-        {
-            currentPageControl = new CurrentPageControl();
-            currentPageControl.PageChanged += CurrentPageControl_PageChanged;
-
-            Back = new CommandVM(() =>
-            {
-                currentPageControl.SetPage(new AdminPage(new AdminVM()));
-            });
-        }
-
-        public Page CurrentPage
-        {
-            get => currentPageControl.Page;
-        }
-
-        private void CurrentPageControl_PageChanged(object sender, EventArgs e)
-        {
-            Signal(nameof(CurrentPage));
-        }
     }
 }

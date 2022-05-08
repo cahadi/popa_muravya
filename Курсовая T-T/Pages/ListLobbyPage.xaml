@@ -26,7 +26,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\1612153027_180-p-cherno-fioletovii-fon-minimalizm-oboi-na-a-232.jpg"/>
         </Grid.Background>
-        <ListView Background="#FF705284" Foreground="Black"
+        <ListView Background="#FF705284" Foreground="White"
                   ItemsSource="{Binding UserList}" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="5" BorderBrush="{x:Null}">
             <ListView.View>
                 <GridView>
@@ -35,7 +35,7 @@
                     <GridViewColumn Header="Фамилия" DisplayMemberBinding="{Binding LastName}"/>
                     <GridViewColumn Header="Номер" DisplayMemberBinding="{Binding Number}"/>
                     <GridViewColumn Header="Логин" DisplayMemberBinding="{Binding Login}"/>
-                    <GridViewColumn Header="Тип экскурсии" DisplayMemberBinding="{Binding TupeOfTour}"/>
+                    <GridViewColumn Header="Тип экскурсии" DisplayMemberBinding="{Binding TypeOfTour}"/>
                 </GridView>
             </ListView.View>
         </ListView>

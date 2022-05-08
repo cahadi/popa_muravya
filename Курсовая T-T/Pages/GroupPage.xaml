@@ -1,4 +1,4 @@
-﻿<Page x:Class="Курсовая_T_T.Pages.GidsPage"
+﻿<Page x:Class="Курсовая_T_T.Pages.GroupPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,8 +6,8 @@
       xmlns:local="clr-namespace:Курсовая_T_T.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="GidsPage">
-    <Grid>
+      Title="GroupPage">
+    <Grid Background="#FF63B1F9">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="80*"/>
             <ColumnDefinition Width="80*"/>
@@ -24,11 +24,12 @@
             <RowDefinition Height="80*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\fon.png"/>
-        </Grid.Background>
-        <Button x:Name="ListL" Content="Лобби" Click="ListL_Click" Grid.Column="0" Grid.Row="1" Background="#FF63B1F9" FontFamily="Segoe Script" FontSize="16" BorderBrush="{x:Null}"/>
-        <Button x:Name="Group" Content="Набрать группу" Click="Group_Click" Grid.Column="0" Grid.Row="3" Background="#FF63B1F9" FontFamily="Segoe Script" FontSize="16" BorderBrush="{x:Null}"/>
-        <Frame x:Name="Frame" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="6"/>
+        <StackPanel DataContext="{Binding AddGroup}" Grid.ColumnSpan="5" Grid.RowSpan="4">
+            <Label Content="Введите ваш логин"/>
+            <TextBox Text="{Binding LoginGid}"/>
+            <Label Content="Введите логин пользователя, которого хотите добавить в группу"/>
+            <TextBox Text="{Binding LoginUser}"/>
+            <Button Content="Добавить в группу" Command="{Binding GroupUser}"/>
+        </StackPanel>
     </Grid>
 </Page>
