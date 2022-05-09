@@ -32,6 +32,18 @@ namespace Курсовая_T_T.Model
             return tour;
         }
 
+        public List<Gids> SelectGidsRange(int skip, int count)
+        {
+            var gid = new List<Gids>();
+            var mySqlDB = MySqlDB.GetDB();
+            string query = $"SELECT * FROM `gids` LIMIT {skip},{count}";
+            if (mySqlDB.OpenConnection())
+            {
+                using (MySqlCommand mc = new MySqlCommand(query, mySqlDB.sqlConnection)) ;
+            }
+            return gid;
+        }
+
         internal List<Gids> GidsEnter(Gids SelectGids)
         {
             var login = SelectGids.Login;
@@ -250,6 +262,31 @@ namespace Курсовая_T_T.Model
                             Types_Of_Tea = dr.GetString("types_of_tea"),
                             Kinds_Of_Tea = dr.GetString("kinds_of_tea"),
                             Sorts_Of_Tea = dr.GetString("sorts_of_tea")
+                        });
+                    }
+                }
+                mySqlDB.CloseConnection();
+            }
+            return result;
+        }
+
+        internal List<Tour> TourList()
+        {
+            var mySqlDB = MySqlDB.GetDB();
+            var result = new List<Tour>();
+            string sql = "SELECT * FROM `tour`";
+            if (mySqlDB.OpenConnection())
+            {
+                using (MySqlCommand mc = new MySqlCommand(sql, mySqlDB.sqlConnection))
+                using (MySqlDataReader dr = mc.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        result.Add(new Tour
+                        {
+                            IdTour = dr.GetInt32("id_tour"),
+                            TypeOfTour = dr.GetString("types_of_tour"),
+                            GidsId = dr.GetInt32("id_gid")
                         });
                     }
                 }

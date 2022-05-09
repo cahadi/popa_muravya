@@ -11,8 +11,9 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="71*"/>
-            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="719*"/>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="45*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="90*"/>
@@ -25,7 +26,7 @@
             <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\background.png"/>
         </Grid.Background>
 
-        <Button x:Name="Registration" Command="{Binding Registration}" Grid.Column="1" Grid.Row="0" BorderBrush="{x:Null}" Foreground="{x:Null}">
+        <Button x:Name="Registration" Command="{Binding Registration}" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" BorderBrush="{x:Null}" Foreground="{x:Null}">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -34,7 +35,7 @@
             </Button.Background>
         </Button>
 
-        <Button x:Name="Information"  Command="{Binding ViewInfo}" Grid.Column="1" BorderBrush="{x:Null}" Foreground="{x:Null}" Grid.Row="1">
+        <Button x:Name="Information"  Command="{Binding ViewInfo}" Grid.Column="1" Grid.ColumnSpan="2" BorderBrush="{x:Null}" Foreground="{x:Null}" Grid.Row="1">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -42,8 +43,8 @@
                 <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Interface\2400489.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="Gids" Content="G" Command="{Binding GidsProf}" Grid.Column="1" Grid.Row="3" Background="#FFA4C395" BorderBrush="{x:Null}" />
-        <Button x:Name="Admin" Content="A" Command="{Binding AdminProf}" Grid.Column="1" Grid.Row="4" Background="#FFA4C395" BorderBrush="{x:Null}"/>
+        <Button x:Name="Gids" Content="G" Command="{Binding GidsProf}" Grid.Column="2" Grid.Row="3" Background="#FF4D373C" BorderBrush="{x:Null}" />
+        <Button x:Name="Admin" Content="A" Command="{Binding AdminProf}" Grid.Column="2" Grid.Row="4" Background="#FF4D373C" BorderBrush="{x:Null}"/>
         <Frame x:Name="Frame" Grid.Column="0" Grid.RowSpan="5" Content="{Binding CurrentPage}" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

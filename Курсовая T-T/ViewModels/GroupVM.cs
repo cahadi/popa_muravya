@@ -9,7 +9,7 @@ namespace Курсовая_T_T.ViewModels
     public class GroupVM : BaseVM
     {
         public Group AddGroup { get; set; }
-        public CommandVM GroupUser { get; set; }
+        public CommandVM Add { get; set; }
 
         private CurrentPageControl currentPageControl;
 
@@ -28,7 +28,7 @@ namespace Курсовая_T_T.ViewModels
 
         private void Init()
         {
-            GroupUser = new CommandVM(() => {
+            Add = new CommandVM(() => {
                 
                 var model = SqlModel.GetInstance();
                 if (AddGroup.ID == 0)

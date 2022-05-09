@@ -1,0 +1,21 @@
+﻿<Page x:Class="Курсовая_T_T.Pages.AddToursPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Курсовая_T_T.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddToursPage">
+    <StackPanel Background="#FF63B1F9">
+        <StackPanel DataContext="{Binding AddTour}">
+        <Label Content="Тип тура"/>
+        <TextBox Text="{Binding TypeOfTour}"/>
+        </StackPanel>
+        <Label Content="Гид"/>
+        <ComboBox ItemsSource="{Binding Gid}"
+                  SelectedItem="{Binding GidsList.Lastname}"
+                  DisplayMemberPath="TypeOfTour"/>
+        <Button Content="Сохранить и закрыть" Command="{Binding SaveTour}" />
+    </StackPanel>
+</Page>

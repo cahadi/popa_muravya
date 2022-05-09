@@ -36,7 +36,7 @@ namespace Курсовая_T_T.ViewModels
             this.currentPageControl = currentPageControl;
             Registration = registration;
             Init();
-            UserTour = Tour.FirstOrDefault(t => t.IdTour == registration.IdTour);
+            UserTour = Tour.FirstOrDefault(u => u.ID == registration.IdTour);
         }
 
         private void Init()

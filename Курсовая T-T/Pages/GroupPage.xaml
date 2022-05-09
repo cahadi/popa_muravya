@@ -29,7 +29,7 @@
             <TextBox Text="{Binding LoginGid}"/>
             <Label Content="Введите логин пользователя, которого хотите добавить в группу"/>
             <TextBox Text="{Binding LoginUser}"/>
-            <Button Content="Добавить в группу" Command="{Binding GroupUser}"/>
+            <Button Content="Добавить в группу" Command="{Binding Add}"/>
         </StackPanel>
     </Grid>
 </Page>

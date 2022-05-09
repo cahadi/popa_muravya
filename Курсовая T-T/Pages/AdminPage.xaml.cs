@@ -46,5 +46,10 @@ namespace Курсовая_T_T.Pages
         {
             Frame.Content = new ListLobbyPage(null);
         }
+
+        private void Tours_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            Frame.Content = new AddToursPage( new AddToursVM(currentPageControl));
+        }
     }
 }

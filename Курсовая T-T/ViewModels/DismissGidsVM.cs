@@ -36,7 +36,7 @@ namespace Курсовая_T_T.ViewModels
                 if (DismissGids.ID == 0)
                     model.Insert(DismissGids);
                 else
-                    model.Update(DismissGids);
+                    model.Delete(DismissGids);
                 currentPageControl.Back();
             });
         }

@@ -28,7 +28,7 @@
             <RowDefinition Height="80*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <StackPanel Grid.Column="2">
+        <StackPanel Grid.Column="2">                                                              
             <Label Content="Тур:"/>
             <ComboBox ItemsSource="{Binding Tour}" SelectedItem="{Binding SelectedTour}" DisplayMemberPath="TypeOfTour"/>
         </StackPanel>

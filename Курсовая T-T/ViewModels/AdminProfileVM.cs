@@ -7,8 +7,8 @@ namespace Курсовая_T_T.ViewModels
 {
     public class AdminProfileVM : BaseVM
     {
-        public Admin AdminEnter { get; set; }
         public CommandVM SaveAdmin { get; set; }
+        public Admin AdminEnter { get; set; }
 
         private CurrentPageControl currentPageControl;
         public AdminProfileVM(CurrentPageControl currentPageControl)
@@ -19,8 +19,8 @@ namespace Курсовая_T_T.ViewModels
         }
         public AdminProfileVM(Admin adminEnter, CurrentPageControl currentPageControl)
         {
-            AdminEnter = adminEnter;
             this.currentPageControl = currentPageControl;
+            AdminEnter = adminEnter;
             Init();
         }
 
