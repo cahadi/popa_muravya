@@ -8,7 +8,7 @@ namespace Курсовая_T_T.ViewModels
     public class AdminProfileVM : BaseVM
     {
         public Admin AdminEnter { get; set; }
-        public CommandVM EnterAdmin { get; set; }
+        public CommandVM SaveAdmin { get; set; }
 
         private CurrentPageControl currentPageControl;
         public AdminProfileVM(CurrentPageControl currentPageControl)
@@ -19,14 +19,14 @@ namespace Курсовая_T_T.ViewModels
         }
         public AdminProfileVM(Admin adminEnter, CurrentPageControl currentPageControl)
         {
-            this.currentPageControl = currentPageControl;
             AdminEnter = adminEnter;
+            this.currentPageControl = currentPageControl;
             Init();
         }
 
         private void Init()
         {
-            EnterAdmin = new CommandVM(() => {
+            SaveAdmin = new CommandVM(() => {
                 var model = SqlModel.GetInstance();
                 if (AdminEnter.ID == 0)
                     model.Insert(AdminEnter);

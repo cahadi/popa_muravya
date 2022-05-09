@@ -10,13 +10,13 @@ namespace Курсовая_T_T.ViewModels
     {
         public User Registration { get; set; }
         public CommandVM SaveUser { get; set; }
-        private Tour selectedTours;
-        public Tour SelectedTours
+        private Tour userTour;
+        public Tour UserTour
         {
-            get => selectedTours;
+            get => userTour;
             set
             {
-                selectedTours = value;
+                userTour = value;
                 Signal();
             }
         }
@@ -36,19 +36,19 @@ namespace Курсовая_T_T.ViewModels
             this.currentPageControl = currentPageControl;
             Registration = registration;
             Init();
-            SelectedTours = Tour.FirstOrDefault(t => t.IdTour == registration.IdTour);
+            UserTour = Tour.FirstOrDefault(t => t.IdTour == registration.IdTour);
         }
 
         private void Init()
         {
             Tour = SqlModel.GetInstance().SelectTourRange(0, 100);
             SaveUser = new CommandVM(() => {
-                if (SelectedTours == null)
+                if (UserTour == null)
                 {
                     System.Windows.MessageBox.Show("Нужно выбрать тур для продолжения");
                     return;
                 }
-                Registration.IdTour = SelectedTours.ID;
+                Registration.IdTour = UserTour.ID;
                 var model = SqlModel.GetInstance();
                 if (Registration.ID == 0)
                     model.Insert(Registration);

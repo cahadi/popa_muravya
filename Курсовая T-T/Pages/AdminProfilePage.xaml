@@ -11,12 +11,14 @@
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\background-2.png"/>
         </Grid.Background>
+        <StackPanel>
             <StackPanel DataContext="{Binding AdminEnter}">
                 <Label Content="Логин"/>
-                <TextBox x:Name="Login" Text="{Binding Login}"/>
+                <TextBox Text="{Binding Login}"/>
                 <Label Content="Пароль"/>
-                <TextBox x:Name="Password" Text="{Binding Password}"/>  
-                <Button Content="Войти" Command="{Binding EnterAdmin}"/>
+                <TextBox Text="{Binding Password}"/>
             </StackPanel>
+            <Button Content="Войти" Command="{Binding SaveAdmin}"/>
+        </StackPanel>
     </Grid>
 </Page>

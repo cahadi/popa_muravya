@@ -12,7 +12,6 @@
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\background-2.png"/>
         </Grid.Background>
-        <StackPanel >
             <StackPanel DataContext="{Binding Registration}">
                 <Label Content="Имя"/>
                 <TextBox Text="{Binding Name}"/>
@@ -23,14 +22,11 @@
                 <Label Content="Логин"/>
                 <TextBox Text="{Binding Login}"/>
                 <Label Content="Пароль"/>
-                <TextBox Text="{Binding Password}"/>
+                <TextBox Text="{Binding Password}"/>  
+                <Label Content="Тип экскурсии"/>
+            <ComboBox ItemsSource="{Binding Tour}" SelectedItem="{Binding UserTour}" DisplayMemberPath="IdTour"/>
+                <Button Content="Сохранить" Command="{Binding SaveUser}"/>
             </StackPanel>
-            <Label Content="Тип экскурсии"/>
-            <ComboBox ItemsSource="{Binding Tour}"
-                  SelectedItem="{Binding SelectedTour}"
-                  DisplayMemberPath="IdTour"/>
-            <Button Content="Сохранить" Command="{Binding SaveUser}"/>
-        </StackPanel>
         <Frame x:Name="Frame" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Page>

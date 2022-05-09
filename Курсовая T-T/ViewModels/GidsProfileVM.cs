@@ -8,7 +8,7 @@ namespace Курсовая_T_T.ViewModels
     public class GidsProfileVM : BaseVM
     {
         public Gids GidsEnter { get; set; }
-        public CommandVM EnterGids { get; set; }
+        public CommandVM SaveGids { get; set; }
 
         private CurrentPageControl currentPageControl;
         public GidsProfileVM(CurrentPageControl currentPageControl)
@@ -26,7 +26,7 @@ namespace Курсовая_T_T.ViewModels
 
         private void Init()
         {
-            EnterGids = new CommandVM(() => {
+            SaveGids = new CommandVM(() => {
                 var model = SqlModel.GetInstance();
                 if (GidsEnter.ID == 0)
                     model.Insert(GidsEnter);

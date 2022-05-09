@@ -8,76 +8,36 @@ namespace Курсовая_T_T.ViewModels
 {
     public class ListLobbyVM : BaseVM
     {
-        private List<int> pageIndexes;
-        private int selectedIndex;
-        private int viewRows;
-        private List<User> userList;
-        public List<User> UserList
+        private Tour selectedTour;
+        private List<User> userBySelectTour;
+
+        public List<Tour> Tour { get; set; }
+        public Tour SelectedTour
         {
-            get => userList;
+            get => selectedTour;
             set
             {
-                userList = value;
+                selectedTour = value;
+                UserBySelectedTour = SqlModel.GetInstance().SelectUserByTour(selectedTour);
                 Signal();
             }
         }
-
-        public CommandVM ViewBack { get; set; }
-        public CommandVM ViewForward { get; set; }
-        public List<int> PageIndexes
+        public List<User> UserBySelectedTour
         {
-            get => pageIndexes;
+            get => userBySelectTour;
             set
             {
-                pageIndexes = value;
+                userBySelectTour = value;
                 Signal();
             }
         }
+            public User SelectedUser { get; set; }
 
-        public int SelectedIndex
-        {
-            get => selectedIndex;
-            set
+            public ListLobbyVM(Tour selectedTour)
             {
-                selectedIndex = value;
-                UserList = SqlModel.GetInstance().UserList();
-                Signal();
+                SqlModel sqlModel = SqlModel.GetInstance();
+                Tour = sqlModel.SelectTourRange(0, 100);
+                SelectedTour = Tour.FirstOrDefault(s => s.ID == selectedTour?.ID);
             }
-        }
-        public int ViewRows
-        {
-            get => viewRows;
-            set
-            {
-                viewRows = value;
-                InitPages();
-                Signal();
-            }
-        }
-
-        public ListLobbyVM()
-        {
-            ViewRows = 2;
-
-            ViewBack = new CommandVM(() =>
-            {
-                if (SelectedIndex > 1)
-                    SelectedIndex--;
-            });
-
-            ViewForward = new CommandVM(() =>
-            {
-                if (SelectedIndex < PageIndexes.Last())
-                    SelectedIndex++;
-            });
-        }
-
-        private void InitPages()
-        {
-            var sqlModel = SqlModel.GetInstance();
-            int pageCount = (sqlModel.GetNumRows(typeof(User)));
-            PageIndexes = new List<int>(Enumerable.Range(1, pageCount));
-            SelectedIndex = 1;
-        }
     }
 }

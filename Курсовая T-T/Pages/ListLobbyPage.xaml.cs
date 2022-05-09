@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Курсовая_T_T.DTO;
 using Курсовая_T_T.ViewModels;
 
 namespace Курсовая_T_T.Pages
@@ -21,10 +22,10 @@ namespace Курсовая_T_T.Pages
     /// </summary>
     public partial class ListLobbyPage : Page
     {
-        public ListLobbyPage()
+        public ListLobbyPage(Tour selectedTour)
         {
             InitializeComponent();
-            DataContext = new ListLobbyVM();
+            DataContext = new ListLobbyVM(selectedTour);
         }
     }
 }

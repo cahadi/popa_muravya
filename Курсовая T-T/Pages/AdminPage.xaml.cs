@@ -44,7 +44,7 @@ namespace Курсовая_T_T.Pages
 
         private void ListL_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            Frame.Content = new ListLobbyPage();
+            Frame.Content = new ListLobbyPage(null);
         }
     }
 }

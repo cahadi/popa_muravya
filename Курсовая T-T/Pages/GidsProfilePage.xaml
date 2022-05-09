@@ -11,12 +11,14 @@
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\background-2.png"/>
         </Grid.Background>
+        <StackPanel>
             <StackPanel DataContext="{Binding GidsEnter}">
                 <Label Content="Логин"/>
                 <TextBox Text="{Binding Login}"/>
                 <Label Content="Пароль"/>
                 <TextBox Text="{Binding Password}"/> 
-                <Button Content="Войти" Command="{Binding EnterGids}"/>
-            </StackPanel>
+            </StackPanel>  
+                <Button Content="Войти" Command="{Binding SaveGids}"/> 
+        </StackPanel>
     </Grid>
 </Page>

@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 using Курсовая_T_T.ViewModels;
 using Курсовая_T_T.Tools;
+using Курсовая_T_T.DTO;
 
 namespace Курсовая_T_T.Pages
 {
@@ -21,7 +17,7 @@ namespace Курсовая_T_T.Pages
         CurrentPageControl currentPageControl;
         private void ListL_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            Frame.Content = new ListLobbyPage();
+            Frame.Content = new ListLobbyPage(null);
         }
 
         private void Group_Click(object sender, System.Windows.RoutedEventArgs e)

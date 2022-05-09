@@ -203,36 +203,6 @@ namespace Курсовая_T_T.Model
             return registrationGids;
         }
 
-
-        internal List<User> UserList()
-        {
-            var mySqlDB = MySqlDB.GetDB();
-            var result = new List<User>();
-            string sql = "SELECT * FROM `user`";
-            if (mySqlDB.OpenConnection())
-            {
-                using (MySqlCommand mc = new MySqlCommand(sql, mySqlDB.sqlConnection))
-                using (MySqlDataReader dr = mc.ExecuteReader())
-                {
-                    while (dr.Read())
-                    {
-                        result.Add(new User
-                        {
-                            IdUser = dr.GetInt32("id_user"),
-                            Name = dr.GetString("name"),
-                            LastName = dr.GetString("lastname"),
-                            Number = dr.GetInt32("number"),
-                            Login = dr.GetString("login"),
-                            Password = dr.GetString("password"),
-                            IdTour = dr.GetInt32("id_tour")
-                        });
-                    }
-                }
-                mySqlDB.CloseConnection();
-            }
-            return result;
-        }
-
         internal List<Gids> GidsList()
         {
             var mySqlDB = MySqlDB.GetDB();

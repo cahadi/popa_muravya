@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ListLobbyPage">
-    <Grid>
+    <Grid Background="#FF63B1F9">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="80*"/>
             <ColumnDefinition Width="80*"/>
@@ -21,13 +21,19 @@
             <RowDefinition Height="80*"/>
             <RowDefinition Height="80*"/>
             <RowDefinition Height="80*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="80*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\1612153027_180-p-cherno-fioletovii-fon-minimalizm-oboi-na-a-232.jpg"/>
-        </Grid.Background>
-        <ListView Background="#FF705284" Foreground="White"
-                  ItemsSource="{Binding UserList}" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="5" BorderBrush="{x:Null}">
+        <StackPanel Grid.Column="2">
+            <Label Content="Тур:"/>
+            <ComboBox ItemsSource="{Binding Tour}" SelectedItem="{Binding SelectedTour}" DisplayMemberPath="TypeOfTour"/>
+        </StackPanel>
+        <ListView Background="#FF5EBEDE" Foreground="Black"
+                  ItemsSource="{Binding UserBySelectTour}"  SelectedItem="{Binding SelectedUser}" Grid.ColumnSpan="5" Grid.Row="1" Grid.RowSpan="10" BorderBrush="{x:Null}">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="id" DisplayMemberBinding="{Binding IdUser}"/>
@@ -35,7 +41,6 @@
                     <GridViewColumn Header="Фамилия" DisplayMemberBinding="{Binding LastName}"/>
                     <GridViewColumn Header="Номер" DisplayMemberBinding="{Binding Number}"/>
                     <GridViewColumn Header="Логин" DisplayMemberBinding="{Binding Login}"/>
-                    <GridViewColumn Header="Тип экскурсии" DisplayMemberBinding="{Binding TypeOfTour}"/>
                 </GridView>
             </ListView.View>
         </ListView>
