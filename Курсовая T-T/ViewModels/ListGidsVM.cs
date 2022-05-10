@@ -11,20 +11,20 @@ namespace Курсовая_T_T.ViewModels
 {
     public class ListGidsVM : BaseVM
     {
+        private List<Gids> gids;
         private List<int> pageIndexes;
         private int selectedIndex;
-        private int viewRows;
-        private List<Gids> listGids;
-        public List<Gids> ListGids
+        private int viewRowsCount;
+
+        public List<Gids> Gids
         {
-            get => listGids;
+            get => gids;
             set
             {
-                listGids = value;
+                gids = value;
                 Signal();
             }
         }
-
         public CommandVM ViewBack { get; set; }
         public CommandVM ViewForward { get; set; }
         public List<int> PageIndexes
@@ -36,23 +36,23 @@ namespace Курсовая_T_T.ViewModels
                 Signal();
             }
         }
-
         public int SelectedIndex
         {
             get => selectedIndex;
             set
             {
                 selectedIndex = value;
-                ListGids = SqlModel.GetInstance().GidsList();
+                Gids = SqlModel.GetInstance().SelectGidsRange((selectedIndex - 1) * ViewRowsCount, ViewRowsCount);
                 Signal();
             }
         }
-        public int ViewRows
+        public int[] RowsCountVariants { get; set; }
+        public int ViewRowsCount
         {
-            get => viewRows;
+            get => viewRowsCount;
             set
             {
-                viewRows = value;
+                viewRowsCount = value;
                 InitPages();
                 Signal();
             }
@@ -60,7 +60,8 @@ namespace Курсовая_T_T.ViewModels
 
         public ListGidsVM()
         {
-            ViewRows = 2;
+            RowsCountVariants = new int[] { 2, 5, 10 };
+            ViewRowsCount = 5;
 
             ViewBack = new CommandVM(() =>
             {
@@ -78,7 +79,7 @@ namespace Курсовая_T_T.ViewModels
         private void InitPages()
         {
             var sqlModel = SqlModel.GetInstance();
-            int pageCount = (sqlModel.GetNumRows(typeof(Gids)));
+            int pageCount = (sqlModel.GetNumRows(typeof(Gids)) / ViewRowsCount) + 1;
             PageIndexes = new List<int>(Enumerable.Range(1, pageCount));
             SelectedIndex = 1;
         }

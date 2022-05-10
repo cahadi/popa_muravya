@@ -28,9 +28,7 @@ namespace Курсовая_T_T.ViewModels
         {
             SaveGids = new CommandVM(() => {
                 var model = SqlModel.GetInstance();
-                if (GidsEnter.ID == 0)
-                    model.Insert(GidsEnter);
-                else
+                if (GidsEnter.ID != 0)
                     model.Update(GidsEnter);
                 currentPageControl.SetPage(new GidsPage());
             });

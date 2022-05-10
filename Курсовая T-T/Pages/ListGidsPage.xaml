@@ -23,7 +23,7 @@
             <RowDefinition Height="80*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <ListView Background="#FF5EBEDE" Foreground="Black" ItemsSource="{Binding GidsList}" SelectedItem="{Binding SelectedGids}" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="5" BorderBrush="{x:Null}">
+        <ListView Background="#FF5EBEDE" Foreground="Black" ItemsSource="{Binding Gids}" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="5" BorderBrush="{x:Null}">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="id" DisplayMemberBinding="{Binding IdGids}"/>

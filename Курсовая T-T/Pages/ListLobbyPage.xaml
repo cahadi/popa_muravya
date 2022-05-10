@@ -33,7 +33,7 @@
             <ComboBox ItemsSource="{Binding Tour}" SelectedItem="{Binding SelectedTour}" DisplayMemberPath="TypeOfTour"/>
         </StackPanel>
         <ListView Background="#FF5EBEDE" Foreground="Black"
-                  ItemsSource="{Binding UserBySelectTour}"  SelectedItem="{Binding SelectedUser}" Grid.ColumnSpan="5" Grid.Row="1" Grid.RowSpan="10" BorderBrush="{x:Null}">
+                  ItemsSource="{Binding UserBySelectedTour}" SelectedItem="{Binding SelectedUser}" Grid.ColumnSpan="5" Grid.Row="1" Grid.RowSpan="10" BorderBrush="{x:Null}">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="id" DisplayMemberBinding="{Binding IdUser}"/>

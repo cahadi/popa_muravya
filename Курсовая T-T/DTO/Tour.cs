@@ -14,7 +14,7 @@ namespace Курсовая_T_T.DTO
         public int IdTour { get; set; }
         [Column("type_of_tour")]
         public string TypeOfTour { get; set; }
-        [Column("id_gid")]
-        public int GidsId { get; set; }
+        [Column("id_gids")]
+        public int IdGids { get; set; }
     }
 }

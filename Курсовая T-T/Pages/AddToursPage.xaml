@@ -10,12 +10,12 @@
     <StackPanel Background="#FF63B1F9">
         <StackPanel DataContext="{Binding AddTour}">
         <Label Content="Тип тура"/>
-        <TextBox Text="{Binding TypeOfTour}"/>
+            <TextBox Text="{Binding TypeOfTour}"/>
         </StackPanel>
         <Label Content="Гид"/>
         <ComboBox ItemsSource="{Binding Gid}"
-                  SelectedItem="{Binding GidsList.Lastname}"
-                  DisplayMemberPath="TypeOfTour"/>
+                  SelectedItem="{Binding TourGid}"
+                  DisplayMemberPath="LastName"/>
         <Button Content="Сохранить и закрыть" Command="{Binding SaveTour}" />
     </StackPanel>
 </Page>

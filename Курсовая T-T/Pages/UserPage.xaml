@@ -26,7 +26,7 @@
                 <TextBox Text="{Binding Password}"/>
             </StackPanel>
             <Label Content="Тип экскурсии"/>
-            <ComboBox ItemsSource="{Binding Tour}" SelectedItem="{Binding UserTour}" DisplayMemberPath="IdTour"/>
+            <ComboBox ItemsSource="{Binding Tours}" SelectedItem="{Binding UserTour}" DisplayMemberPath="TypeOfTour"/>
             <Button Content="Сохранить" Command="{Binding SaveUser}"/>
         </StackPanel>
         <Frame x:Name="Frame" NavigationUIVisibility="Hidden"/>

@@ -12,53 +12,52 @@ namespace Курсовая_T_T.ViewModels
 {
     public class AddToursVM : BaseVM
     {
-        public Tour AddTour { get; set; }
+        public Tour AddTour { get; }
         public CommandVM SaveTour { get; set; }
-        private Gids gidsList;
-        public Gids GidsList
+        public Gids TourGid
         {
-            get => gidsList;
+            get => tourGid;
             set
             {
-                gidsList = value;
+                tourGid = value;
                 Signal();
             }
         }
 
+        public List<Gids> Gid { get; set; }
+
         private CurrentPageControl currentPageControl;
+        private Gids tourGid;
+
         public AddToursVM(CurrentPageControl currentPageControl)
         {
             this.currentPageControl = currentPageControl;
             AddTour = new Tour();
-            InitCommand();
+            Init();
         }
-        public AddToursVM(Tour editTour, CurrentPageControl currentPageControl)
+
+        public AddToursVM(Tour addTour, CurrentPageControl currentPageControl)
         {
+            AddTour = addTour;
             this.currentPageControl = currentPageControl;
-            AddTour = editTour;
-            InitCommand();
-            GidsList = Gid.FirstOrDefault(t => t.ID == editTour.GidsId);
+            Init();
+            TourGid = Gid.FirstOrDefault(t => t.ID == tourGid.IdGids);
         }
 
-
-        public List<Gids> Gid { get; set; }
-
-        private void InitCommand()
+        private void Init()
         {
             Gid = SqlModel.GetInstance().SelectGidsRange(0, 100);
             SaveTour = new CommandVM(() => {
-                if (GidsList == null)
+                if (TourGid == null)
                 {
                     System.Windows.MessageBox.Show("Нужно выбрать гида для продолжения");
                     return;
                 }
-                AddTour.GidsId = GidsList.ID;
+                AddTour.IdGids = TourGid.ID;
                 var model = SqlModel.GetInstance();
                 if (AddTour.ID == 0)
                     model.Insert(AddTour);
-                else
-                    model.Update(AddTour);
-                currentPageControl.Back();
+                currentPageControl.SetPage(new AdminPage());
             });
         }
     }

@@ -8,9 +8,8 @@ namespace Курсовая_T_T.ViewModels
 {
     public class UserVM : BaseVM
     {
-        public User Registration { get; set; }
+        public User Registration { get; }
         public CommandVM SaveUser { get; set; }
-        private Tour userTour;
         public Tour UserTour
         {
             get => userTour;
@@ -21,9 +20,10 @@ namespace Курсовая_T_T.ViewModels
             }
         }
 
+        public List<Tour> Tours { get; set; }
 
-        public List<Tour> Tour { get; set; }
         private CurrentPageControl currentPageControl;
+        private Tour userTour;
 
         public UserVM(CurrentPageControl currentPageControl)
         {
@@ -31,17 +31,18 @@ namespace Курсовая_T_T.ViewModels
             Registration = new User();
             Init();
         }
+
         public UserVM(User registration, CurrentPageControl currentPageControl)
         {
-            this.currentPageControl = currentPageControl;
             Registration = registration;
+            this.currentPageControl = currentPageControl;
             Init();
-            UserTour = Tour.FirstOrDefault(u => u.ID == registration.IdTour);
+            UserTour = Tours.FirstOrDefault(s => s.ID == registration.IdTour);
         }
 
         private void Init()
         {
-            Tour = SqlModel.GetInstance().SelectTourRange(0, 100);
+            Tours = SqlModel.GetInstance().SelectTourRange(0, 100);
             SaveUser = new CommandVM(() => {
                 if (UserTour == null)
                 {
@@ -50,10 +51,8 @@ namespace Курсовая_T_T.ViewModels
                 }
                 Registration.IdTour = UserTour.ID;
                 var model = SqlModel.GetInstance();
-                if (Registration.ID == 0)
-                    model.Insert(Registration);
-                else
-                    model.Update(Registration);
+                if (UserTour.ID == 0)
+                    model.Insert(UserTour);
                 currentPageControl.Back();
             });
         }

@@ -9,7 +9,7 @@ namespace Курсовая_T_T.ViewModels
     public class ListLobbyVM : BaseVM
     {
         private Tour selectedTour;
-        private List<User> userBySelectTour;
+        private List<User> userBySelectedTour;
 
         public List<Tour> Tour { get; set; }
         public Tour SelectedTour
@@ -24,20 +24,20 @@ namespace Курсовая_T_T.ViewModels
         }
         public List<User> UserBySelectedTour
         {
-            get => userBySelectTour;
+            get => userBySelectedTour;
             set
             {
-                userBySelectTour = value;
+                userBySelectedTour = value;
                 Signal();
             }
         }
-            public User SelectedUser { get; set; }
+        public User SelectedUser { get; set; }
 
-            public ListLobbyVM(Tour selectedTour)
-            {
-                SqlModel sqlModel = SqlModel.GetInstance();
-                Tour = sqlModel.SelectTourRange(0, 100);
-                SelectedTour = Tour.FirstOrDefault(s => s.ID == selectedTour?.ID);
-            }
+        public ListLobbyVM(Tour selectedTour)
+        {
+            SqlModel sqlModel = SqlModel.GetInstance();
+            Tour = sqlModel.SelectTourRange(0, 100);
+            SelectedTour = Tour.FirstOrDefault(u => u.ID == selectedTour?.ID);
+        }
     }
 }
