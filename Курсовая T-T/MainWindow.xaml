@@ -24,7 +24,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\background.png"/>
         </Grid.Background>
-
+        <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="4" Background="#FF4D373C"/>
         <Button x:Name="Registration" Command="{Binding Registration}" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" BorderBrush="{x:Null}" Foreground="{x:Null}">
             <Button.Effect>
                 <DropShadowEffect/>
