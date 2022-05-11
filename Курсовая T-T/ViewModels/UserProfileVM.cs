@@ -7,35 +7,37 @@ using Курсовая_T_T.Tools;
 
 namespace Курсовая_T_T.ViewModels
 {
-    public class GroupVM : BaseVM
+    public class UserProfileVM : BaseVM
     {
-        public Group AddGroup { get; set; }
-        public CommandVM SaveGroup { get; set; }
+        public Comment EditComment { get; }
+        public CommandVM SaveComment { get; set; }
+
 
         private CurrentPageControl currentPageControl;
 
-        public GroupVM(CurrentPageControl currentPageControl)
+        public UserProfileVM(CurrentPageControl currentPageControl)
         {
             this.currentPageControl = currentPageControl;
-            AddGroup = new Group();
+            EditComment = new Comment();
             Init();
         }
 
-        public GroupVM(Group addGroup, CurrentPageControl currentPageControl)
+        public UserProfileVM(Comment editComment, CurrentPageControl currentPageControl)
         {
-            AddGroup = addGroup;
+            EditComment = editComment;
             this.currentPageControl = currentPageControl;
             Init();
         }
 
         private void Init()
         {
-            SaveGroup = new CommandVM(() => {
+            SaveComment = new CommandVM(() => {
                 var model = SqlModel.GetInstance();
-                if (AddGroup.ID == 0)
-                    model.Insert(AddGroup);
-                currentPageControl.Back();
+                if (EditComment.ID == 0)
+                    model.Insert(EditComment);
+                System.Windows.MessageBox.Show("Благодарим за отзыв");
             });
         }
+
     }
 }

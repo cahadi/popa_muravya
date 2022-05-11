@@ -13,7 +13,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Media;
 
 namespace Курсовая_T_T.Pages
 {
@@ -25,16 +24,6 @@ namespace Курсовая_T_T.Pages
         public CustomPage5()
         {
             InitializeComponent();
-        }
-
-        private void CustomPage4_Click(object sender, RoutedEventArgs e)
-        {
-            FrameCustom.Content = new CustomPage4();
-        }
-
-        private void CustomPage6_Click(object sender, RoutedEventArgs e)
-        {
-            FrameCustom.Content = new CustomPage6();
         }
 
         private void PlayMusic_Click(object sender, RoutedEventArgs e)
@@ -49,6 +38,16 @@ namespace Курсовая_T_T.Pages
         {
             SoundPlayer sp = new SoundPlayer();
             sp.Stop();
+        }
+
+        private void Custom4(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("Pages/CustomPage4.xaml", UriKind.Relative));
+        }
+
+        private void Custom6(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("Pages/CustomPage6.xaml", UriKind.Relative));
         }
     }
 }

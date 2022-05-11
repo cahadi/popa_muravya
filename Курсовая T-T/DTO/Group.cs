@@ -16,7 +16,5 @@ namespace Курсовая_T_T.DTO
         public string LoginGid { get; set; }
         [Column("login_user")]
         public string LoginUser { get; set; }
-        [Column("id_tour")]
-        public int IdTour { get; set; }
     }
 }

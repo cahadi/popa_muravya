@@ -22,10 +22,10 @@ namespace Курсовая_T_T.Pages
     /// </summary>
     public partial class ListLobbyPage : Page
     {
-        public ListLobbyPage(Tour selectedTour)
+        public ListLobbyPage()
         {
             InitializeComponent();
-            DataContext = new ListLobbyVM(selectedTour);
+            DataContext = new ListLobbyVM();
         }
     }
 }

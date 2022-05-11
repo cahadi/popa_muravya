@@ -22,7 +22,5 @@ namespace Курсовая_T_T.DTO
         public string Login { get; set; }
         [Column("password")]
         public string Password { get; set; }
-        [Column("id_tour")]
-        public int IdTour { get; set; }
     }
 }

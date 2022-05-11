@@ -27,14 +27,14 @@ namespace Курсовая_T_T.Pages
             DataContext = new ViewTeaVM();
         }
 
-        private void TeaPage9_Click(object sender, RoutedEventArgs e)
+        private void Tea9(object sender, RoutedEventArgs e)
         {
-            FrameTea.Content = new TeaPage9();
+            NavigationService.Navigate(new Uri("Pages/TeaPage9.xaml", UriKind.Relative));
         }
 
-        private void InformationPage_Click(object sender, RoutedEventArgs e)
+        private void Information(object sender, RoutedEventArgs e)
         {
-            FrameTea.Content = new InformationPage();
+            NavigationService.Navigate(new Uri("Pages/InformationPage.xaml", UriKind.Relative));
         }
     }
 }

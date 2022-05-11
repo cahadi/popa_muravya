@@ -29,38 +29,29 @@
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\background-5.png"/>
         </Grid.Background>
-        <TextBlock Background="#FFF6E8CD" Grid.ColumnSpan="4" Grid.RowSpan="4" FontFamily="Segoe Print" FontSize="14">
+        <TextBlock Background="#FFF6E8CD" Grid.ColumnSpan="8" Grid.RowSpan="4" FontFamily="Segoe Print" FontSize="16">
             Музыка для церемонии
             <LineBreak />
-            Традиция чаепития представляет собой не 
             <LineBreak />
-            только саму процедуру заваривания и 
             <LineBreak />
-            употребления чая. Национальный ритуал 
+            Традиция чаепития представляет собой не только саму процедуру заваривания и 
             <LineBreak />
-            включает также и прослушивание колоритной 
+            употребления чая. Национальный ритуал включает также и прослушивание колоритной 
             <LineBreak />
-            китайской музыки.  <LineBreak />
-            Провести настоящий ритуал чаепития нельзя 
+            китайской музыки. Провести настоящий ритуал чаепития нельзя без музыки. 
             <LineBreak />
-            без музыки. Подбор ее – настоящая культура 
+            Подбор ее – настоящая культура чаепития. Она должна быть спокойной и ненавязчивой, а 
             <LineBreak />
-            чаепития. Она должна быть спокойной и 
+            по звучанию напоминать национальные инструменты. Можно встретить оригинальный 
             <LineBreak />
-            ненавязчивой, а по звучанию напоминать 
+            вариант, когда в музыкальную композицию вписывается щебет певчих птиц, журчание 
             <LineBreak />
-            национальные инструменты. Можно встретить 
-            <LineBreak />
-            оригинальный вариант, когда в музыкальную 
-            <LineBreak />
-            композицию вписывается щебет певчих птиц, 
-            <LineBreak />
-            журчание лесного ручья
+            лесного ручья
         </TextBlock>
-        
-            <Button Content="Предыдущая" Click="CustomPage4_Click" Background="#FFF6E8CD" Grid.Column="0" Grid.Row="4"/>
 
-            <Button Content="Следующая" Click="CustomPage6_Click" Background="#FFF6E8CD" Grid.Column="7" Grid.Row="4"/>
+        <Button Content="Предыдущая" Click="Custom4" Background="#FFF6E8CD" Grid.Column="0" Grid.Row="4"/>
+
+        <Button Content="Следующая" Click="Custom6" Background="#FFF6E8CD" Grid.Column="7" Grid.Row="4"/>
 
         <Button x:Name="Play" Click="PlayMusic_Click" Grid.Column="3" Grid.Row="4" BorderBrush="{x:Null}" Foreground="{x:Null}">
                 <Button.Effect>

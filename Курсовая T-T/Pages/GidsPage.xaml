@@ -29,6 +29,7 @@
         </Grid.Background>
         <Button x:Name="ListL" Content="Лобби" Click="ListL_Click" Grid.Column="0" Grid.Row="1" Background="#FF63B1F9" FontFamily="Segoe Script" FontSize="16" BorderBrush="{x:Null}"/>
         <Button x:Name="Group" Content="Набрать группу" Click="Group_Click" Grid.Column="0" Grid.Row="3" Background="#FF63B1F9" FontFamily="Segoe Script" FontSize="16" BorderBrush="{x:Null}"/>
+        <Button x:Name="GroupL" Content="Посмотреть группу" Click="GroupL_Click" Grid.Column="0" Grid.Row="5" Background="#FF63B1F9" FontFamily="Segoe Script" FontSize="16" BorderBrush="{x:Null}"/>
         <Frame x:Name="Frame" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="6"/>
     </Grid>
 </Page>

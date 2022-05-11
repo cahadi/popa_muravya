@@ -30,36 +30,28 @@
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\background-4.png"/>
         </Grid.Background>
-        <TextBlock Background="#FFD2C1A1" FontFamily="Segoe Script" FontSize="14" Grid.ColumnSpan="4" Grid.RowSpan="3">
-            Китайцы стали культивировать чайные кусты.
+        <TextBlock Background="#FFD2C1A1" FontFamily="Segoe Script" FontSize="16" Grid.ColumnSpan="8" Grid.RowSpan="4">
+                 <LineBreak />
             <LineBreak />
-            Позднее для напитка придумали иероглиф. 
             <LineBreak />
-            Между двумя цветущими кустами стоит 
+            Китайцы стали культивировать чайные кусты. Позднее для напитка придумали 
             <LineBreak />
-            человек, что символизирует единение людей и 
+            иероглиф. Между двумя цветущими кустами стоит человек, что символизирует 
             <LineBreak />
-            природы. Первые упоминания о свойствах чая 
+            единение людей и природы. Первые упоминания о свойствах чая относятся 
             <LineBreak />
-            относятся к 1115 году до нашей эры. Князь Жоу 
+            к 1115 году до нашей эры. Князь Жоу Гун писал, что напиток горьковатый, но 
             <LineBreak />
-            Гун писал, что напиток горьковатый, но 
+            помогает лучше мыслить и запоминать, зрение обостряется, появляется бодрость. 
             <LineBreak />
-            помогает лучше мыслить и запоминать, 
+            До 221 года до нашей эры чай использовался в качестве домашнего лекарственного 
             <LineBreak />
-            зрение обостряется, появляется бодрость. 
-            <LineBreak />
-            До 221 года до нашей эры чай использовался 
-            <LineBreak />
-            в качестве домашнего лекарственного средства. 
-            <LineBreak />
-            Его пили при симптомах обезвоживания.
+            средства. Его пили при симптомах обезвоживания.
                     
         </TextBlock>
-            <Button Content="Предыдущая" Click="HistoryPage_Click" Background="#FFD2C1A1" Grid.Column="0" Grid.Row="4" />
+        <Button Content="Предыдущая" Click="History" Background="#FFD2C1A1" Grid.Column="0" Grid.Row="4" />
 
-            <Button Content="Следующая" Click="HistoryPage3_Click" Background="#FFD2C1A1" Grid.Column="7" Grid.Row="4"/>
+        <Button Content="Следующая" Click="History3" Background="#FFD2C1A1" Grid.Column="7" Grid.Row="4"/>
 
-        <Frame x:Name="FrameHistory" Grid.ColumnSpan="8" Grid.RowSpan="5" />
     </Grid>
 </Page>

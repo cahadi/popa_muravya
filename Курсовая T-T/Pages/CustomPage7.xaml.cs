@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using System.Media;
+using System;
 
 namespace Курсовая_T_T.Pages
 {
@@ -14,14 +15,14 @@ namespace Курсовая_T_T.Pages
             InitializeComponent();
         }
 
-        private void CustomPage6_Click(object sender, RoutedEventArgs e)
+        private void Custom6(object sender, RoutedEventArgs e)
         {
-            FrameCustom.Content = new CustomPage6();
+            NavigationService.Navigate(new Uri("Pages/CustomPage6.xaml", UriKind.Relative));
         }
 
-        private void CustomPage8_Click(object sender, RoutedEventArgs e)
+        private void Custom8(object sender, RoutedEventArgs e)
         {
-            FrameCustom.Content = new CustomPage8();
+            NavigationService.Navigate(new Uri("Pages/CustomPage8.xaml", UriKind.Relative));
         }
     }
 }

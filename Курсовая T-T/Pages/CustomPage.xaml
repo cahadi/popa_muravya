@@ -30,32 +30,25 @@
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\background-5.png"/>
         </Grid.Background>
-        <TextBlock Background="#FFF6E8CD" FontFamily="Segoe Script" FontSize="14" Grid.ColumnSpan="4" Grid.RowSpan="3">
+        <TextBlock Background="#FFF6E8CD" FontFamily="Segoe Script" FontSize="16" Grid.ColumnSpan="8" Grid.RowSpan="4">
             Таинство чаепития в Китае
             <LineBreak />
             <LineBreak />
-Национальное название ритуала употребления 
             <LineBreak />
-            чайного напитка — Гунфу-Ча. Во второй части 
+            Национальное название ритуала употребления чайного напитка — Гунфу-Ча. 
             <LineBreak />
-            четырнадцатого века, во время правления древней 
+            Во второй части четырнадцатого века, во время правления древней династии Мин, 
             <LineBreak />
-            династии Мин, только император мог 
+            только император мог наслаждаться чаем, приготовленным из цельных чайных 
             <LineBreak />
-            наслаждаться чаем, приготовленным из 
+            листьев. Этот чай специально выращивался и собирался для императорской семьи. 
             <LineBreak />
-            цельных чайных листьев. Этот чай специально 
+            Простой народ в то время довольствовался мелколистовыми и недорогими сортами 
             <LineBreak />
-            выращивался и собирался для императорской 
-            <LineBreak />
-            семьи. Простой народ в то время довольствовался 
-            <LineBreak />
-            мелколистовыми и недорогими сортами чая.
+            чая.
         </TextBlock>
-            <Button Content="Назад" Click="InformationPage_Click" Background="#FFF6E8CD" Grid.Row="4" Grid.Column="0"/>
-
-            <Button Content="Следующая" Click="CustomPage2_Click" Background="#FFF6E8CD" Grid.Row="4"  Grid.Column="7"/>
-
-        <Frame x:Name="FrameCustom"  Grid.ColumnSpan="8" Grid.RowSpan="5" />
+        <Button x:Name="Information" Content="Назад" Click="ViewInfo" Background="#FFF6E8CD" Grid.Row="4" Grid.Column="0"/>
+        <Button Content="Следующая" Click="CustomT" Background="#FFF6E8CD" Grid.Row="4"  Grid.Column="7"/>
+        <Frame x:Name="Frame" Grid.ColumnSpan="8" Grid.RowSpan="5"/>
     </Grid>
 </Page>

@@ -29,32 +29,32 @@
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\background-5.png"/>
         </Grid.Background>
-        <TextBlock Background="#FFF6E8CD" FontFamily="Segoe Script" FontSize="14" Grid.ColumnSpan="4" Grid.RowSpan="3">
-           Современный чайный набор может состоять из 
-            <LineBreak /> 
-            разного количества предметов. Основные из них 
-            <LineBreak /> 
-             – это гайвани, чахай и пиалы.
-            <LineBreak /> 
-Гайвани – глиняный чайник для заваривания. 
-            <LineBreak /> 
-            Недорогой вариант исполнения – из стекла.
-            <LineBreak /> 
-Чахай – небольшой чайничек или кувшинчик для 
-            <LineBreak /> 
-            переливания заваренного чая по пиалам.
-            <LineBreak /> 
-Пиала – емкость для употребления чая. 
-            <LineBreak /> 
-            Изготавливается в основном из глины или 
-            <LineBreak /> 
+        <TextBlock Background="#FFF6E8CD" FontFamily="Segoe Script" FontSize="16" Grid.ColumnSpan="8" Grid.RowSpan="4">
+                <LineBreak />
+            <LineBreak />
+            Современный чайный набор может состоять из разного количества предметов. 
+            <LineBreak />
+            Основные из них  – это гайвани, чахай и пиалы. 
+            <LineBreak />
+            <LineBreak />
+            Гайвани – глиняный чайник для заваривания. 
+            <LineBreak />
+            Недорогой вариант исполнения – из стекла. 
+            <LineBreak />
+            <LineBreak />
+            Чахай – небольшой чайничек или кувшинчик для переливания заваренного чая по 
+            <LineBreak />
+            пиалам. 
+            <LineBreak />
+            <LineBreak />
+            Пиала – емкость для употребления чая. Изготавливается в основном из глины или 
+            <LineBreak />
             фарфора.
         </TextBlock>
-        
-            <Button Content="Предыдущая" Click="CustomPage8_Click" Background="#FFF6E8CD" Grid.Column="0" Grid.Row="4"/>
 
-            <Button Content="Вернуться" Click="InformationPage_Click" Background="#FFF6E8CD" Grid.Column="7" Grid.Row="4"/>
+        <Button Content="Предыдущая" Click="Custom8" Background="#FFF6E8CD" Grid.Column="0" Grid.Row="4"/>
 
-        <Frame x:Name="FrameCustom" Grid.ColumnSpan="8" Grid.RowSpan="5" />
+        <Button Content="Вернуться" Click="Information" Background="#FFF6E8CD" Grid.Column="7" Grid.Row="4"/>
+
     </Grid>
 </Page>

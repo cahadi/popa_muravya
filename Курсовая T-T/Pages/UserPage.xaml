@@ -25,9 +25,7 @@
                 <Label Content="Пароль"/>
                 <TextBox Text="{Binding Password}"/>
             </StackPanel>
-            <Label Content="Тип экскурсии"/>
-            <ComboBox ItemsSource="{Binding Tours}" SelectedItem="{Binding UserTour}" DisplayMemberPath="TypeOfTour"/>
-            <Button Content="Сохранить" Command="{Binding SaveUser}"/>
+            <Button Content="Войти в лобби и оставить отзыв" Command="{Binding SaveUser}"/>
         </StackPanel>
         <Frame x:Name="Frame" NavigationUIVisibility="Hidden"/>
     </Grid>

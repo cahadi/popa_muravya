@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Курсовая_T_T.ViewModels;
 
 namespace Курсовая_T_T.Pages
 {
@@ -25,14 +26,14 @@ namespace Курсовая_T_T.Pages
             InitializeComponent();
         }
 
-        private void TeaPage4_Click(object sender, RoutedEventArgs e)
+        private void Tea4(object sender, RoutedEventArgs e)
         {
-            FrameTea.Content = new TeaPage4();
+            NavigationService.Navigate(new Uri("Pages/TeaPage4.xaml", UriKind.Relative));
         }
 
-        private void TeaPage6_Click(object sender, RoutedEventArgs e)
+        private void Tea6(object sender, RoutedEventArgs e)
         {
-            FrameTea.Content = new TeaPage6();
+            NavigationService.Navigate(new Uri("Pages/TeaPage6.xaml", UriKind.Relative));
         }
     }
 }

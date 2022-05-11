@@ -31,37 +31,30 @@
             <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\background-3.png"/>
         </Grid.Background>
 
-        <TextBlock Background="#FFD7D2B1" FontFamily="Segoe Script" FontSize="14" Grid.ColumnSpan="4" Grid.RowSpan="4" >
+        <TextBlock Background="#FFD7D2B1" FontFamily="Segoe Script" FontSize="16" Grid.ColumnSpan="8" Grid.RowSpan="4" >
             Шаг 4. 
+            <LineBreak />
+            <LineBreak />
             <LineBreak />
             Выбор упаковки
             <LineBreak />
-Всё, что зелёного цвета, хранится в 
             <LineBreak />
-            холодильнике при температуре -18 С. Всё 
             <LineBreak />
-            остальное – при комнатной температуре. В 
+            Всё, что зелёного цвета, хранится в холодильнике при температуре -18 С.
             <LineBreak />
-            вакуум пакуется в Китае только тегуаньинь, 
+            Всё остальное – при комнатной температуре. В вакуум пакуется в Китае только 
             <LineBreak />
-            потому что у него сферическая скрутка, и это 
+            тегуаньинь, потому что у него сферическая скрутка, и это единственный чай, 
             <LineBreak />
-            единственный чай, который невозможно 
+            который невозможно сломать. В вакууме другие чаи крошатся, а целостность 
             <LineBreak />
-            сломать. В вакууме другие чаи крошатся, а 
+            чайного листа – это один из основных критериев его качества. Поэтому весовые чаи 
             <LineBreak />
-            целостность чайного листа – это один из 
-            <LineBreak />
-            основных критериев его качества. Поэтому 
-            <LineBreak />
-            весовые чаи пакуются в обычную герметичную 
-            <LineBreak />
-            упаковку с немного откачанным воздухом.
+            пакуются в обычную герметичную упаковку с немного откачанным воздухом.
             
         </TextBlock>
-            <Button Content="Предыдущая" Click="TeaPage3_Click" Background="#FFD7D2B1" Grid.Column="0" Grid.Row="4"/>
+        <Button Content="Предыдущая" Click="Tea3" Background="#FFD7D2B1" Grid.Column="0" Grid.Row="4"/>
 
-            <Button Content="Следующая" Click="TeaPage5_Click" Background="#FFD7D2B1" Grid.Column="7" Grid.Row="4"/>
-        <Frame x:Name="FrameTea"  Grid.ColumnSpan="8" Grid.RowSpan="5" />
+        <Button Content="Следующая" Click="Tea5" Background="#FFD7D2B1" Grid.Column="7" Grid.Row="4"/>
     </Grid>
 </Page>

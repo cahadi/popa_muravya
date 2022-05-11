@@ -30,38 +30,27 @@
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\background-5.png"/>
         </Grid.Background>
-        <TextBlock Background="#FFF6E8CD" FontFamily="Segoe Script" FontSize="14" Grid.ColumnSpan="4" Grid.RowSpan="4">
+        <TextBlock Background="#FFF6E8CD" FontFamily="Segoe Script" FontSize="16" Grid.ColumnSpan="8" Grid.RowSpan="4">
             Набор для чайной церемонии
-             <LineBreak /> <LineBreak />
-В переводе на китайский он звучит как Чацуй – 
-             <LineBreak />
-            чайный инструмент. Его использование вошло в 
-             <LineBreak />
-            активную фазу примерно в 1981 года и позже 
-             <LineBreak />
-            разошлось по всем странам, где и получила 
-             <LineBreak />
-            популярность. Долгое время китайцы не 
-             <LineBreak />
-            использовали его, но сейчас трудно представить 
-             <LineBreak />
-            весь процесс без его использования. Включение в 
-             <LineBreak />
-            набор дополнительных предметов имеет 
-             <LineBreak />
-            своеобразный смысл. Почитатели даосизма и 
-             <LineBreak />
-            буддизма уверены, что действия, проводимые 
-             <LineBreak />
-            этими предметами, помогают расслабить ум, и 
-             <LineBreak />
-            настроится на чаепитие.
+             <LineBreak /> <LineBreak />   <LineBreak />
+            В переводе на китайский он звучит как Чацуй – чайный инструмент. Его 
+            <LineBreak />
+            использование вошло в активную фазу примерно в 1981 года и позже разошлось по 
+            <LineBreak />
+            всем странам, где и получила популярность. Долгое время китайцы не использовали 
+            <LineBreak />
+            его, но сейчас трудно представить весь процесс без его использования. Включение в 
+            <LineBreak />
+            набор дополнительных предметов имеет своеобразный смысл. Почитатели даосизма и 
+            <LineBreak />
+            буддизма уверены, что действия, проводимые этими предметами, помогают 
+            <LineBreak />
+            расслабить ум, и настроится на чаепитие.
         </TextBlock>
 
-        <Button Content="Предыдущая" Click="CustomPage7_Click" Background="#FFF6E8CD" Grid.Column="0" Grid.Row="4" />
+        <Button Content="Предыдущая" Click="Custom7" Background="#FFF6E8CD" Grid.Column="0" Grid.Row="4" />
 
-        <Button Content="Следующая" Click="CustomPage9_Click" Background="#FFF6E8CD" Grid.Column="7" Grid.Row="4" />
+        <Button Content="Следующая" Click="Custom9" Background="#FFF6E8CD" Grid.Column="7" Grid.Row="4" />
 
-        <Frame x:Name="FrameCustom" Grid.ColumnSpan="8" Grid.RowSpan="5" />
     </Grid>
 </Page>

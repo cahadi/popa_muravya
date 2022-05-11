@@ -30,47 +30,39 @@
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\background-5.png"/>
         </Grid.Background>
-        <TextBlock Background="#FFF6E8CD" FontFamily="Segoe Script" FontSize="14"  Grid.ColumnSpan="4" Grid.RowSpan="5">
-            Обстановка для проведения церемонии
+        <TextBlock Background="#FFF6E8CD" FontFamily="Segoe Script" FontSize="16" Grid.ColumnSpan="9" Grid.RowSpan="4">
+            Обстановка для проведения церемонии   
             <LineBreak />
-            Традиционная чайная церемония в Китае, 
             <LineBreak />
-            согласно негласным правилам, проводится 
             <LineBreak />
-            в чайном домике. Это специальное помещение 
+            Традиционная чайная церемония в Китае, согласно негласным правилам, проводится 
             <LineBreak />
-            не имеющее яркого освещения. Для оформления 
+            в чайном домике. Это специальное помещение не имеющее яркого освещения. Для 
             <LineBreak />
-            используются мягкие пастельные тона с 
+            оформления используются мягкие пастельные тона с использованием природных 
             <LineBreak />
-            использованием природных оттенков цвета. 
+           оттенков цвета.  Сама атмосфера чайного домика должна 
+            расслаблять и  
             <LineBreak />
-            Сама атмосфера чайного домика должна 
+           успокаивать. Основным условием является низкий стол для размещения всех гостей 
             <LineBreak />
-            расслаблять и успокаивать. Основным условием 
-            <LineBreak />
-            является низкий стол для размещения всех 
-            <LineBreak />
-            гостей и необходимой посуды. На полу 
-            <LineBreak />
+            и необходимой посуды. На полу 
             размещаются мягкие коврики или подушки для 
             <LineBreak />
             удобства гостей. Сегодня чайные домики 
+            представляют собой место встречи, где  
             <LineBreak />
-            представляют собой место встречи, где можно 
+           можно пообщаться в спокойной и непринужденной 
+            обстановке. Традиционные коврики 
             <LineBreak />
-            пообщаться в спокойной и непринужденной 
+           заменились  на шезлонги. Каждый гость может расслабиться 
+            и выпить любимый   
             <LineBreak />
-            обстановке. Традиционные коврики заменились 
-            <LineBreak />
-            на шезлонги. Каждый гость может расслабиться 
-            <LineBreak />
-            и выпить любимый чайный напиток.
+            чайный напиток.
         </TextBlock>
-            <Button Content="Предыдущая" Click="CustomPage_Click" Background="#FFF6E8CD" Grid.Column="4" Grid.Row="4"/>
+            <Button Content="Предыдущая" Click="Custom" Background="#FFF6E8CD" Grid.Column="0" Grid.Row="4"/>
 
-            <Button Content="Следующая" Click="CustomPage3_Click" Background="#FFF6E8CD" Grid.Column="7" Grid.Row="4"/>
+        <Button Content="Следующая" Click="Custom3" Background="#FFF6E8CD" Grid.Column="7" Grid.Row="4"/>
 
-        <Frame x:Name="FrameCustom"  Grid.ColumnSpan="8" Grid.RowSpan="5" />
     </Grid>
 </Page>

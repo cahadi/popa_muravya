@@ -17,14 +17,14 @@ using Курсовая_T_T.ViewModels;
 namespace Курсовая_T_T.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для AddToursPage.xaml
+    /// Логика взаимодействия для GroupListPage.xaml
     /// </summary>
-    public partial class AddToursPage : Page
+    public partial class GroupListPage : Page
     {
-        public AddToursPage(AddToursVM vm)
+        public GroupListPage()
         {
             InitializeComponent();
-            DataContext = vm;
+            DataContext = new GroupListVM();
         }
     }
 }

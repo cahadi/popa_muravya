@@ -26,15 +26,14 @@ namespace Курсовая_T_T.Pages
             InitializeComponent();
         }
 
-        private void CustomPage2_Click(object sender, RoutedEventArgs e)
+        private void Custom2(object sender, RoutedEventArgs e)
         {
-            FrameCustom.Content = new CustomPage2();
+            NavigationService.Navigate(new Uri("Pages/CustomPage2.xaml", UriKind.Relative));
         }
 
-        private void CustomPage4_Click(object sender, RoutedEventArgs e)
+        private void Custom4(object sender, RoutedEventArgs e)
         {
-            FrameCustom.Content = new CustomPage4();
+            NavigationService.Navigate(new Uri("Pages/CustomPage4.xaml", UriKind.Relative));
         }
-        
     }
 }

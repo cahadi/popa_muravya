@@ -30,44 +30,31 @@
         <Grid.Background>
         <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\background-5.png"/>
         </Grid.Background>
-        <TextBlock Background="#FFF6E8CD" FontFamily="Segoe Script" FontSize="14" Grid.ColumnSpan="4" Grid.RowSpan="4">
-            Тогда один собеседник после беседы за чаем встал 
-             <LineBreak />
-            и положил на стол средний и указательный 
-             <LineBreak />
-            пальцы, согнув их. Этим он сказал императору 
-             <LineBreak />
-            следующее: «Мы поняли, кто вы и знаем, что нам 
-             <LineBreak />
-            грозит смерть за общение с вами. Но мы хотим 
-             <LineBreak />
-            выразить вам свою признательность от лица 
-             <LineBreak />
-            нашего народа. Этим жестом мы даем понять, 
-             <LineBreak />
-            что мы обожествляем и любим вас». Теперь, за 
-             <LineBreak />
-            чаем в Китае, собеседники показывают уважение 
-             <LineBreak />
-            аналогичным знаком.
-             <LineBreak />
-            В Поднебесной заваривают, и пьют чай в любой 
-             <LineBreak />
-            семье. Иногда этот обычай становится частью 
-             <LineBreak />
-            совершенно другого. Во время свадьбы родители 
-             <LineBreak />
-            жениха или невесты дарят им набор для 
-             <LineBreak />
-            проведения чайной церемонии. Они в свою очередь п
-             <LineBreak />
-            односят чай родителям как знак уважения.
+        <TextBlock Background="#FFF6E8CD" FontFamily="Segoe Script" FontSize="16" Grid.ColumnSpan="8" Grid.RowSpan="4">
+                  <LineBreak />
+            <LineBreak />
+            Тогда один собеседник после беседы за чаем встал и положил на стол средний и 
+            <LineBreak />
+            указательный пальцы, согнув их. Этим он сказал императору следующее: 
+            <LineBreak />
+            «Мы поняли, кто вы и знаем, что нам грозит смерть за общение с вами. Но мы 
+            <LineBreak />
+            хотим выразить вам свою признательность от лица нашего народа. Этим жестом 
+            <LineBreak />
+            мы даем понять, что мы обожествляем и любим вас». Теперь, за чаем в Китае, 
+            <LineBreak />
+            собеседники показывают уважение аналогичным знаком. В Поднебесной заваривают, и 
+            <LineBreak />
+            пьют чай в любой семье. Иногда этот обычай становится частью совершенно другого. 
+            <LineBreak />
+            Во время свадьбы родители жениха или невесты дарят им набор для проведения 
+            <LineBreak />
+            чайной церемонии. Они в свою очередь подносят чай родителям как знак уважения.
  </TextBlock>
 
-        <Button Content="Предыдущая" Click="CustomPage6_Click" Background="#FFF6E8CD" Grid.Column="0" Grid.Row="4"/>
+        <Button Content="Предыдущая" Click="Custom6" Background="#FFF6E8CD" Grid.Column="0" Grid.Row="4"/>
 
-        <Button Content="Следующая" Click="CustomPage8_Click" Background="#FFF6E8CD" Grid.Column="7" Grid.Row="4"/>
+        <Button Content="Следующая" Click="Custom8" Background="#FFF6E8CD" Grid.Column="7" Grid.Row="4"/>
 
-        <Frame x:Name="FrameCustom" Grid.ColumnSpan="8" Grid.RowSpan="5" />
     </Grid>
 </Page>

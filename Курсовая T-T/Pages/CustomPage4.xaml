@@ -30,37 +30,31 @@
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\background-5.png"/>
         </Grid.Background>
-        <TextBlock Background="#FFF6E8CD" FontFamily="Segoe Script" FontSize="14" Grid.ColumnSpan="4" Grid.RowSpan="4">
-            Чайный мастер определяет оптимальную 
+        <TextBlock Background="#FFF6E8CD" FontFamily="Segoe Script" FontSize="16" Grid.ColumnSpan="8" Grid.RowSpan="4">
+            Чайный мастер определяет оптимальную температуру нагрева, учитывая 
             <LineBreak />
-            температуру нагрева, учитывая завариваемый 
+            завариваемый сорт чая. При заваривании чая улун оптимальная температура это 
             <LineBreak />
-            сорт чая. При заваривании чая улун 
+            95 градусов по Цельсию, а для чая пуэр – 100 градусов. Специалисты чайного дела 
             <LineBreak />
-            оптимальная температура это 95 градусов по 
+            определяли температуру закипающей воды без термометра:
+            <LineBreak /> 
             <LineBreak />
-            Цельсию, а для чая пуэр – 100 градусов. 
             <LineBreak />
-            Специалисты чайного дела определяли 
-            <LineBreak />
-            температуру закипающей воды без термометра:
-            <LineBreak />  <LineBreak />
-                 76-86 — образуются пузырьки в диаметре 
-            <LineBreak />
-            3 мм – их китайцы называют 
+                 76-86 — образуются пузырьки в диаметре 3 мм – их китайцы называют 
             <LineBreak />
             «крабьими глазами»,
             <LineBreak />
             <LineBreak />
-            90-96 — возникают пузыри большего 
             <LineBreak />
-            размера – 8 мм, носящие название «глаза рыбы».
+            90-96 — возникают пузыри большего размера – 8 мм, носящие название 
+            <LineBreak />
+            «глаза рыбы».
         </TextBlock>
-        
-            <Button Content="Предыдущая" Click="CustomPage3_Click" Background="#FFF6E8CD" Grid.Column="0" Grid.Row="4"/>
 
-            <Button Content="Следующая" Click="CustomPage5_Click" Background="#FFF6E8CD" Grid.Column="7" Grid.Row="4"/>
+        <Button Content="Предыдущая" Click="Custom3" Background="#FFF6E8CD" Grid.Column="0" Grid.Row="4"/>
 
-        <Frame x:Name="FrameCustom" Grid.ColumnSpan="8" Grid.RowSpan="5" />
+        <Button Content="Следующая" Click="Custom5" Background="#FFF6E8CD" Grid.Column="7" Grid.Row="4"/>
+
     </Grid>
 </Page>

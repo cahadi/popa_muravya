@@ -30,28 +30,26 @@
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\background-4.png"/>
         </Grid.Background>
-        <TextBlock Background="#FFD2C1A1" FontFamily="Segoe Script" FontSize="14" Grid.ColumnSpan="4" Grid.RowSpan="2">
-            Цянь Лун был страстным коллекционером 
+        <TextBlock Background="#FFD2C1A1" FontFamily="Segoe Script" FontSize="16" Grid.ColumnSpan="8" Grid.RowSpan="4">
             <LineBreak />
-            чайной посуды, он не мог и дня обойтись без 
             <LineBreak />
-            напитка. По Великому Шелковому пути заварка 
             <LineBreak />
-            распространяется в другие страныЭпоха Цинь, 
             <LineBreak />
-            продлившаяся с 17 по начало 20 века, стала 
             <LineBreak />
-            периодом расцвета традиций. Начиная от 
+            Цянь Лун был страстным коллекционером чайной посуды, он не мог и дня 
             <LineBreak />
-            императора и заканчивая производителями 
+            обойтись без напитка. По Великому Шелковому пути заварка распространяется 
+            <LineBreak />
+            в другие страныЭпоха Цинь, продлившаяся с 17 по начало 20 века, стала периодом 
+            <LineBreak />
+            расцвета традиций. Начиная от императора и заканчивая производителями 
             <LineBreak />
             чая – все занимались изучением его свойств.
             
         </TextBlock>
-        <Button Content="Предыдущая" Click="HistoryPag3_Click" Background="#FFD2C1A1" Grid.Column="0" Grid.Row="4"/>
+        <Button Content="Предыдущая" Click="History3" Background="#FFD2C1A1" Grid.Column="0" Grid.Row="4"/>
 
-            <Button Content="Вернуться" Click="InformationPage_Click" Background="#FFD2C1A1" Grid.Column="7" Grid.Row="4"/>
+        <Button Content="Вернуться" Click="Information" Background="#FFD2C1A1" Grid.Column="7" Grid.Row="4"/>
 
-        <Frame x:Name="FrameHistory" Grid.ColumnSpan="8" Grid.RowSpan="5" />
     </Grid>
 </Page>

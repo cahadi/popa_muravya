@@ -31,29 +31,26 @@
             <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\background-3.png"/>
         </Grid.Background>
 
-        <TextBlock Background="#FFD7D2B1" FontFamily="Segoe Script" FontSize="14" Grid.ColumnSpan="4" Grid.RowSpan="3">
+        <TextBlock Background="#FFD7D2B1" FontFamily="Segoe Script" FontSize="16" Grid.ColumnSpan="8" Grid.RowSpan="4">
             Шаг 3. 
+            <LineBreak />
+            <LineBreak />
             <LineBreak />
             Дегустация чая
             <LineBreak />
-“Выбирая разные сорта, не пробуйте их 
             <LineBreak />
-            последовательно один за другим. Делайте 
             <LineBreak />
-            параллельное заваривание, то есть 
+            “Выбирая разные сорта, не пробуйте их последовательно один за другим. Делайте 
             <LineBreak />
-            одновременное, так вы почувствуете разницу. 
+            параллельное заваривание, то есть одновременное, так вы почувствуете разницу. 
             <LineBreak />
-            При последовательном заваривании от вас 
+            При последовательном заваривании от вас могут ускользнуть тончайшие нюансы 
             <LineBreak />
-            могут ускользнуть тончайшие нюансы вкуса и 
-            <LineBreak />
-            аромата”.
+            вкуса и аромата”.
             
         </TextBlock>
-            <Button Content="Предыдущая" Click="TeaPage2_Click" Background="#FFD7D2B1" Grid.Column="0" Grid.Row="4"/>
+        <Button Content="Предыдущая" Click="Tea2" Background="#FFD7D2B1" Grid.Column="0" Grid.Row="4"/>
 
-            <Button Content="Следующая" Click="TeaPage4_Click"  Background="#FFD7D2B1" Grid.Column="7" Grid.Row="4"/>
-        <Frame x:Name="FrameTea"  Grid.ColumnSpan="8" Grid.RowSpan="5" />
+        <Button Content="Следующая" Click="Tea4"  Background="#FFD7D2B1" Grid.Column="7" Grid.Row="4"/>
     </Grid>
 </Page>

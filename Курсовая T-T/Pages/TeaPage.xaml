@@ -30,35 +30,30 @@
             <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\background-3.png"/>
         </Grid.Background>
 
-        <TextBlock Background="#FFD7D2B1" FontFamily="Segoe Script" FontSize="14" Grid.ColumnSpan="4" Grid.RowSpan="3">
+        <TextBlock Background="#FFD7D2B1" FontFamily="Segoe Script" FontSize="16" Grid.ColumnSpan="8" Grid.RowSpan="4">
             Как грамотно выбрать китайский чай?
             <LineBreak />
-Шаг 1. 
+            <LineBreak />
+            <LineBreak />
+            Шаг 1. 
+            <LineBreak />
             <LineBreak />
             Знакомство с китайской чайной традицией
             <LineBreak />
-Китайская чайная традиция сильно 
             <LineBreak />
-            отличается от русской. В России щепотка чая 
+            Китайская чайная традиция сильно  отличается от русской. В России щепотка чая 
             <LineBreak />
-            заливается крепким кипятком в большом 
+            заливается крепким кипятком в большом чайнике и настаивается, а после заварка 
             <LineBreak />
-            чайнике и настаивается, а после заварка 
+            разбавляется водой по вкусу. В китайской чайной традиции берётся небольшое 
             <LineBreak />
-            разбавляется водой по вкусу. В китайской 
+            количество листа, заваривается в миниатюрном объёме, так, чтобы заварка 
             <LineBreak />
-            чайной традиции берётся небольшое количество 
-            <LineBreak />
-            листа, заваривается в миниатюрном объёме, 
-            <LineBreak />
-            так, чтобы заварка занимала весь объём. 
-            <LineBreak />
-            Китайский чай не настаивают, но проливают.
+            занимала весь объём. Китайский чай не настаивают, но проливают.
         </TextBlock>
-            <Button Content="Назад" Click="InformationPage_Click" Background="#FFD7D2B1" Grid.Column="0" Grid.Row="4"/>
+        <Button Content="Назад" Click="Information" Background="#FFD7D2B1" Grid.Column="0" Grid.Row="4"/>
 
-            <Button Content="Следующая" Click="TeaPage2_Click" Background="#FFD7D2B1" Grid.Column="7" Grid.Row="4"/>
+        <Button Content="Следующая" Click="Tea2"  Background="#FFD7D2B1" Grid.Column="7" Grid.Row="4"/>
         
-        <Frame x:Name="FrameTea" Grid.ColumnSpan="8" Grid.RowSpan="5" />
     </Grid>
 </Page>

@@ -1,18 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
+using Курсовая_T_T.Tools;
+using Курсовая_T_T.DTO;
+using Курсовая_T_T.Model;
 using System.Windows.Controls;
+using Курсовая_T_T.Pages;
 using System.Media;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System;
 
 namespace Курсовая_T_T.Pages
 {
@@ -26,14 +19,14 @@ namespace Курсовая_T_T.Pages
             InitializeComponent();
         }
 
-        private void InformationPage_Click(object sender, RoutedEventArgs e)
+        private void ViewInfo(object sender, RoutedEventArgs e)
         {
-            FrameCustom.Content = new InformationPage();
+            NavigationService.Navigate(new Uri("Pages/InformationPage.xaml", UriKind.Relative));
         }
 
-        private void CustomPage2_Click(object sender, RoutedEventArgs e)
+        private void CustomT(object sender, RoutedEventArgs e)
         {
-            FrameCustom.Content = new CustomPage2();
+            NavigationService.Navigate(new Uri("Pages/CustomPage2.xaml", UriKind.Relative));
         }
     }
 }

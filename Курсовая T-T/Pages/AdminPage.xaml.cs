@@ -26,12 +26,6 @@ namespace Курсовая_T_T.Pages
             get => currentPageControl.Page;
         }
 
-
-        private void Dismiss_Click(object sender, System.Windows.RoutedEventArgs e)
-        {
-            Frame.Content = new DismissGidsPage(new DismissGidsVM(currentPageControl));  
-        }
-
         private void Hire_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             Frame.Content = new HireGidsPage(new HireGidsVM(currentPageControl));
@@ -44,12 +38,12 @@ namespace Курсовая_T_T.Pages
 
         private void ListL_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            Frame.Content = new ListLobbyPage(null);
+            Frame.Content = new ListLobbyPage();
         }
 
-        private void Tours_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void Group_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            Frame.Content = new AddToursPage( new AddToursVM(currentPageControl));
+            Frame.Content = new GroupListPage();
         }
     }
 }

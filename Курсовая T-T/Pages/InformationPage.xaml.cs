@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using System;
 
 namespace Курсовая_T_T.Pages
 {
@@ -12,17 +13,17 @@ namespace Курсовая_T_T.Pages
 
         private void Tea_Click(object sender, RoutedEventArgs e)
         {
-            FrameInfo.Content = new TeaPage();
+            NavigationService.Navigate(new Uri("Pages/TeaPage.xaml", UriKind.Relative));
         }
 
         private void Custom_Click(object sender, RoutedEventArgs e)
         {
-            FrameInfo.Content = new CustomPage();
+            NavigationService.Navigate(new Uri("Pages/CustomPage.xaml", UriKind.Relative));
         }
 
         private void History_Click(object sender, RoutedEventArgs e)
         {
-            FrameInfo.Content = new HistoryPage();
+            NavigationService.Navigate(new Uri("Pages/HistoryPage.xaml", UriKind.Relative));
         }
 
     }

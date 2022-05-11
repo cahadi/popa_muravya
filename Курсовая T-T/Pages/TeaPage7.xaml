@@ -30,33 +30,28 @@
             <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\background-3.png"/>
         </Grid.Background>
 
-        <TextBlock Background="#FFD7D2B1" FontFamily="Segoe Script" FontSize="14" Grid.ColumnSpan="4" Grid.RowSpan="3">
+        <TextBlock Background="#FFD7D2B1" FontFamily="Segoe Script" FontSize="16" Grid.ColumnSpan="8" Grid.RowSpan="4">
             Шаг 7. 
+            <LineBreak />
+            <LineBreak />
             <LineBreak />
             Выбор посуды для заваривания     
             <LineBreak />
-            Существует огромное количество разной 
             <LineBreak />
-            чайной посуды, и продолжает появляться всё 
             <LineBreak />
-            новая и новая. Самый профессиональный девайс – 
+            Существует огромное количество разной чайной посуды, и продолжает появляться 
             <LineBreak />
-            это гайвань (盖碗, gàiwǎn), она стоит два юаня и 
+            всё новая и новая. Самый профессиональный девайс – это гайвань (盖碗, gàiwǎn), 
             <LineBreak />
-            продаётся в любом магазине. Все 
+            она стоит два юаня и продаётся в любом магазине. Все профессиональные тестеры 
             <LineBreak />
-            профессиональные тестеры на рынках 
+            на рынках пользуются обычными двухъюаневыми гайванями. Для новичков это 
             <LineBreak />
-            пользуются обычными двухъюаневыми 
-            <LineBreak />
-            гайванями. Для новичков это не самый удобный 
-            <LineBreak />
-            инструмент, потому что легко обжечься.
+            не самый удобный инструмент, потому что легко обжечься.
             
         </TextBlock>
-            <Button Content="Предыдущая" Click="TeaPage6_Click" Background="#FFD7D2B1" Grid.Column="0" Grid.Row="4"/>
+        <Button Content="Предыдущая" Click="Tea6" Background="#FFD7D2B1" Grid.Column="0" Grid.Row="4"/>
 
-            <Button Content="Следующая" Click="TeaPage8_Click" Background="#FFD7D2B1" Grid.Column="7" Grid.Row="4"/>
-        <Frame x:Name="FrameTea"  Grid.ColumnSpan="8" Grid.RowSpan="5" />
+        <Button Content="Следующая" Click="Tea8" Background="#FFD7D2B1" Grid.Column="7" Grid.Row="4"/>
     </Grid>
 </Page>

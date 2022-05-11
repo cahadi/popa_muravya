@@ -58,6 +58,5 @@
                 <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Interface\5523908.png"/>
             </Button.Background>
         </Button>
-        <Frame x:Name="FrameInfo" Grid.ColumnSpan="7" Grid.RowSpan="5" />
     </Grid>
 </Page>

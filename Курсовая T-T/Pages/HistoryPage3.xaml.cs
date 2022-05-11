@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Media;
+using Курсовая_T_T.ViewModels;
 
 namespace Курсовая_T_T.Pages
 {
@@ -26,14 +27,14 @@ namespace Курсовая_T_T.Pages
             InitializeComponent();
         }
 
-        private void HistoryPag2_Click(object sender, RoutedEventArgs e)
+        private void History2(object sender, RoutedEventArgs e)
         {
-            FrameHistory.Content = new HistoryPage2();
+            NavigationService.Navigate(new Uri("Pages/HistoryPage2.xaml", UriKind.Relative));
         }
 
-        private void HistoryPage4_Click(object sender, RoutedEventArgs e)
+        private void History4(object sender, RoutedEventArgs e)
         {
-            FrameHistory.Content = new HistoryPage4();
+            NavigationService.Navigate(new Uri("Pages/HistoryPage4.xaml", UriKind.Relative));
         }
     }
 }

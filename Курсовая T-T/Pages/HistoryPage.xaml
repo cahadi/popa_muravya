@@ -30,41 +30,31 @@
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\background-4.png"/>
         </Grid.Background>
-        <TextBlock Background="#FFD2C1A1" FontFamily="Segoe Script" FontSize="14" Grid.ColumnSpan="4" Grid.RowSpan="4">
+        <TextBlock Background="#FFD2C1A1" FontFamily="Segoe Script" FontSize="16" Grid.ColumnSpan="8" Grid.RowSpan="4">
             История возникновения чая
             <LineBreak />
             <LineBreak />
-            Кусты камелии произрастали с незапамятных
             <LineBreak />
-            времен, а производство напитка началось только  
+            Кусты камелии произрастали с незапамятных времен, а производство напитка 
             <LineBreak />
-            5 тысяч лет назад. Происхождение чай берет в 
+            началось только 5 тысяч лет назад. Происхождение чай берет в Китае. Считается, 
             <LineBreak />
-            Китае. Считается, что его впервые открыл 
+            что его впервые открыл китайский император Шень Нуну в 2700 году до нашей эры. 
             <LineBreak />
-            китайский император Шень Нуну в 2700 году  
+            Он вел исследования в области медицины и использовал напиток для лечения.
             <LineBreak />
-            до нашей эры. Он вел исследования в области 
+            Существует легенда, что Шень Нуну, уставший к вечеру, решил вскипятить воду. 
             <LineBreak />
-            медицины и использовал напиток для лечения.
+            В нее попали чайные листочки. После того, как император выпил снадобье, он 
             <LineBreak />
-            Существует легенда, что Шень Нуну, уставший
+            наполнился бодростью и энергией. Этот случай положил начало более тщательному 
             <LineBreak />
-            к вечеру, решил вскипятить воду. В нее попали 
-            <LineBreak />
-            чайные листочки. После того, как император 
-            <LineBreak />
-            выпил снадобье, он наполнился бодростью и 
-            <LineBreak />
-            энергией. Этот случай положил начало более 
-            <LineBreak />
-            тщательному изучению свойств нового средства.
+            изучению свойств нового средства.
         </TextBlock>
-        
-            <Button Content="Назад" Click="InformationPage_Click"  Background="#FFD2C1A1" Grid.Column="0" Grid.Row="4" />
-            
-            <Button Content="Следующая" Click="HistoryPage2_Click" Background="#FFD2C1A1" Grid.Column="7" Grid.Row="4" />
 
-        <Frame x:Name="FrameHistory" Grid.ColumnSpan="8" Grid.RowSpan="5" />
+        <Button Content="Назад" Click="Information"  Background="#FFD2C1A1" Grid.Column="0" Grid.Row="4" />
+
+        <Button Content="Следующая" Click="History2" Background="#FFD2C1A1" Grid.Column="7" Grid.Row="4" />
+
     </Grid>
 </Page>

@@ -25,18 +25,15 @@
             <RowDefinition Height="80*"/>
             <RowDefinition Height="80*"/>
             <RowDefinition Height="80*"/>
-            <RowDefinition Height="80*"/>
-            <RowDefinition Height="80*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\fon.png"/>
         </Grid.Background>
-        <Button x:Name="Tours" Content="Добавить тур" Click="Tours_Click" Background="#FF63B1F9" FontFamily="Segoe Print" FontSize="13" BorderBrush="{x:Null}"/> 
-        <Button x:Name="Dismiss" Content="Уволить" Click="Dismiss_Click" Grid.Column="0" Grid.Row="2"  Background="#FF63B1F9" FontFamily="Segoe Print" FontSize="16" BorderBrush="{x:Null}"/>
-        <Button x:Name="Hire" Content="Нанять" Click="Hire_Click" Grid.Column="0" Grid.Row="4"  Background="#FF63B1F9" FontFamily="Segoe Print" FontSize="16" BorderBrush="{x:Null}"/>
-        <Button x:Name="ListG" Content="Гиды" Click="ListG_Click" Grid.Column="0" Grid.Row="6" Background="#FF63B1F9" FontFamily="Segoe Print" FontSize="16"/>
-        <Button x:Name="ListL" Content="Лобби" Click="ListL_Click" Grid.Column="0" Grid.Row="8" Background="#FF63B1F9" FontFamily="Segoe Print" FontSize="16" BorderBrush="{x:Null}"/>
+        <Button x:Name="Groups" Content="Группы" Click="Group_Click" Background="#FF63B1F9" FontFamily="Segoe Print" FontSize="13" BorderBrush="{x:Null}"/> 
+        <Button x:Name="Hire" Content="Нанять" Click="Hire_Click" Grid.Column="0" Grid.Row="2"  Background="#FF63B1F9" FontFamily="Segoe Print" FontSize="16" BorderBrush="{x:Null}"/>
+        <Button x:Name="ListG" Content="Гиды" Click="ListG_Click" Grid.Column="0" Grid.Row="4" Background="#FF63B1F9" FontFamily="Segoe Print" FontSize="16"/>
+        <Button x:Name="ListL" Content="Лобби" Click="ListL_Click" Grid.Column="0" Grid.Row="6" Background="#FF63B1F9" FontFamily="Segoe Print" FontSize="16" BorderBrush="{x:Null}"/>
         <Frame x:Name="Frame" Grid.Column="1" Grid.ColumnSpan="6" Grid.RowSpan="9"/>
     </Grid>
 </Page>

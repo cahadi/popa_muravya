@@ -31,35 +31,30 @@
             <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\background-3.png"/>
         </Grid.Background>
 
-        <TextBlock Background="#FFD7D2B1" FontFamily="Segoe Script" FontSize="14" Grid.ColumnSpan="4" Grid.RowSpan="3">
+        <TextBlock Background="#FFD7D2B1" FontFamily="Segoe Script" FontSize="16" Grid.ColumnSpan="8" Grid.RowSpan="4">
             Шаг 2. 
              <LineBreak />
+            <LineBreak />
+            <LineBreak />
             Выбор сорта
              <LineBreak />
-Существует семь основных групп чаёв: зеленый, 
-             <LineBreak />
-            белый, желтый, улун, красный, чёрный и пуэры. 
-             <LineBreak />
-            Отличаются они друг от друга глубиной 
-             <LineBreak />
-            ферментации чайного листа. Возьмите по 
-             <LineBreak />
-            одному образцу из каждой группы, так вы 
-             <LineBreak />
-            сможете выбрать для себя, какая или какие 
-             <LineBreak />
-            несколько групп вам нравятся больше. И дальше 
-             <LineBreak />
-            постепенно попробовать больше сортов этой 
-             <LineBreak />
-            группы из разных провинций, разной ценовой 
-             <LineBreak />
-            категории, разного периода сбора.
+            <LineBreak />
+            <LineBreak />
+            Существует семь основных групп чаёв: зеленый, белый, желтый, улун, красный, 
+            <LineBreak />
+            чёрный и пуэры. Отличаются они друг от друга глубиной ферментации чайного 
+            <LineBreak />
+            листа. Возьмите по одному образцу из каждой группы, так вы сможете выбрать для 
+            <LineBreak />
+            себя, какая или какие несколько групп вам нравятся больше. И дальше 
+            <LineBreak />
+            постепенно попробовать больше сортов этой группы из разных провинций, разной 
+            <LineBreak />
+            ценовой категории, разного периода сбора.
            
         </TextBlock>
-            <Button Content="Предыдущая" Click="TeaPage_Click" Background="#FFD7D2B1" Grid.Column="0" Grid.Row="4"/>
+        <Button Content="Предыдущая" Click="Tea" Background="#FFD7D2B1" Grid.Column="0" Grid.Row="4"/>
 
-            <Button Content="Следующая" Click="TeaPage3_Click" Background="#FFD7D2B1" Grid.Column="7" Grid.Row="4"/>
-        <Frame x:Name="FrameTea"  Grid.ColumnSpan="8" Grid.RowSpan="5" />
+        <Button Content="Следующая" Click="Tea3" Background="#FFD7D2B1" Grid.Column="7" Grid.Row="4"/>
     </Grid>
 </Page>

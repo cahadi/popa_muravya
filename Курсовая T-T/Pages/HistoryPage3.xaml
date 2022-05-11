@@ -30,33 +30,26 @@
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\background-4.png"/>
         </Grid.Background>
-        <TextBlock Background="#FFD2C1A1" FontFamily="Segoe Script" FontSize="14" Grid.ColumnSpan="4" Grid.RowSpan="3"> 
-            Эпоха Хань стала для напитка временем 
+        <TextBlock Background="#FFD2C1A1" FontFamily="Segoe Script" FontSize="16" Grid.ColumnSpan="8" Grid.RowSpan="4"> 
             <LineBreak />
-            распространения. Заварку стали продавать на 
             <LineBreak />
-            рынках. В провинции Сычуань чай могут 
             <LineBreak />
-            позволить себе представители всех слоев 
             <LineBreak />
-            населения. В эпоху Тан появляются новые 
+            Эпоха Хань стала для напитка временем распространения. Заварку стали 
             <LineBreak />
-            технологии обработки чайных листов, 
+            продавать на рынках. В провинции Сычуань чай могут позволить себе 
             <LineBreak />
-            позволяющие производить продукцию в большем 
+            представители всех слоев населения. В эпоху Тан появляются новые технологии 
             <LineBreak />
-            объеме. Напиток прочно входит в жизнь 
+            обработки чайных листов, позволяющие производить продукцию в большем объеме. 
             <LineBreak />
-            китайцев и превращается в культ. 
+            Напиток прочно входит в жизнь китайцев и превращается в культ. 
             <LineBreak />
-            Сам император принимает подношения в виде 
-            <LineBreak />
-            элитных сортов чая.
+            Сам император принимает подношения в виде элитных сортов чая.
         </TextBlock>
-            <Button Content="Предыдущая" Click="HistoryPag2_Click" Background="#FFD2C1A1" Grid.Column="0" Grid.Row="4" />
+        <Button Content="Предыдущая" Click="History2" Background="#FFD2C1A1" Grid.Column="0" Grid.Row="4" />
 
-            <Button Content="Следующая" Click="HistoryPage4_Click" Background="#FFD2C1A1" Grid.Column="7" Grid.Row="4" />
+        <Button Content="Следующая" Click="History4" Background="#FFD2C1A1" Grid.Column="7" Grid.Row="4" />
 
-        <Frame x:Name="FrameHistory" Grid.ColumnSpan="8" Grid.RowSpan="5" />
     </Grid>
 </Page>

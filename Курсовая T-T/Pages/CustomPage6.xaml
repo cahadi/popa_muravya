@@ -30,43 +30,31 @@
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\background-5.png"/>
         </Grid.Background>
-        <TextBlock Background="#FFF6E8CD" FontFamily="Segoe Script" FontSize="14" Grid.ColumnSpan="4" Grid.RowSpan="4">
+        <TextBlock Background="#FFF6E8CD" FontFamily="Segoe Script" FontSize="16" Grid.ColumnSpan="8" Grid.RowSpan="4">
             Благодарность чаю
             <LineBreak />
             <LineBreak />
-Чайная китайская культура не только богата 
             <LineBreak />
-            древними легендами. Существует обычай, 
+            Чайная китайская культура не только богата древними легендами. Существует 
             <LineBreak />
-            который дошел до наших дней из династии Цинь. 
+            обычай, который дошел до наших дней из династии Цинь. Как-то император оделся 
             <LineBreak />
-            Как-то император оделся в простые одежды и 
+            в простые одежды и отправился странствовать по стране, чтобы узнать, что о нем 
             <LineBreak />
-            отправился странствовать по стране, чтобы 
+            думает народ. Он зашел в таверну и увидел, что два человека пьют чай. Он присел к 
             <LineBreak />
-            узнать, что о нем думает народ. Он зашел в 
+            двум посетителям и завел непринужденную беседу. Но они сразу поняли, что перед 
             <LineBreak />
-            таверну и увидел, что два человека пьют чай. 
+            ними не обычный странник. Они должны были преклонить колени, но в таком случае 
             <LineBreak />
-            Он присел к двум посетителям и завел 
-            <LineBreak />
-            непринужденную беседу. Но они сразу поняли, что 
-            <LineBreak />
-            перед ними не обычный странник. Они должны 
-            <LineBreak />
-            были преклонить колени, но в таком случае их 
-            <LineBreak />
-            бы тут же казнили, так как правитель 
-            <LineBreak />
-            являлся священным и с ним нельзя 
+            их бы тут же казнили, так как правитель являлся священным и с ним нельзя 
             <LineBreak />
             разговаривать простым людям. 
         </TextBlock>
-        
-            <Button Content="Предыдущая" Click="CustomPage5_Click" Background="#FFF6E8CD" Grid.Column="0" Grid.Row="4"/>
 
-        <Button Content="Следующая" Click="CustomPage7_Click" Background="#FFF6E8CD" Grid.Column="7" Grid.Row="4"/>
+        <Button Content="Предыдущая" Click="Custom5" Background="#FFF6E8CD" Grid.Column="0" Grid.Row="4"/>
 
-        <Frame x:Name="FrameCustom" Grid.ColumnSpan="8" Grid.RowSpan="5" />
+        <Button Content="Следующая" Click="Custom7" Background="#FFF6E8CD" Grid.Column="7" Grid.Row="4"/>
+
     </Grid>
 </Page>

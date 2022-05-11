@@ -31,27 +31,24 @@
             <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\background-3.png"/>
         </Grid.Background>
 
-        <TextBlock Background="#FFD7D2B1" FontFamily="Segoe Script" FontSize="14" Grid.ColumnSpan="4" Grid.RowSpan="2">
+        <TextBlock Background="#FFD7D2B1" FontFamily="Segoe Script" FontSize="16" Grid.ColumnSpan="8" Grid.RowSpan="4">
             Шаг 5. 
+            <LineBreak />
+            <LineBreak />
             <LineBreak />
             Выбор продавца чая
             <LineBreak />
-“Не покупайте чай на туристических 
             <LineBreak />
-            маршрутах. Обычные чайные на 
             <LineBreak />
-            туристических улицах в крупных городах 
+            Не покупайте чай на туристических маршрутах. Обычные чайные на 
             <LineBreak />
-            работают с наценкой от 800%. Покупайте на 
+            туристических улицах в крупных городах работают с наценкой от 800%. 
             <LineBreak />
-            чайных рынках или в местечковых чайных
-            <LineBreak />
-            магазинах”.
+            Покупайте на чайных рынках или в местечковых чайных магазинах.
             
         </TextBlock>
-            <Button Content="Предыдущая" Click="TeaPage4_Click" Background="#FFD7D2B1" Grid.Column="0" Grid.Row="4"/>
+        <Button Content="Предыдущая" Click="Tea4" Background="#FFD7D2B1" Grid.Column="0" Grid.Row="4"/>
 
-            <Button  Content="Следующая" Click="TeaPage6_Click"  Background="#FFD7D2B1" Grid.Column="7" Grid.Row="4"/>
-        <Frame x:Name="FrameTea"  Grid.ColumnSpan="8" Grid.RowSpan="5" />
+        <Button  Content="Следующая" Click="Tea6" Background="#FFD7D2B1" Grid.Column="7" Grid.Row="4"/>
     </Grid>
 </Page>

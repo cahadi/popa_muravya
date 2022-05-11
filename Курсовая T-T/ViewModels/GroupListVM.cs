@@ -3,26 +3,22 @@ using System.Linq;
 using Курсовая_T_T.DTO;
 using Курсовая_T_T.Model;
 using Курсовая_T_T.Tools;
-using Курсовая_T_T.Pages;
-using System;
-using System.Windows.Controls;
 
 namespace Курсовая_T_T.ViewModels
 {
-    class ViewTeaVM : BaseVM
+    public class GroupListVM : BaseVM
     {
-        
-        private List<Tea> teaList;
+        private List<Group> groups;
         private List<int> pageIndexes;
         private int selectedIndex;
         private int viewRowsCount;
 
-        public List<Tea> TeaList
+        public List<Group> Groups
         {
-            get => teaList;
+            get => groups;
             set
             {
-                teaList = value;
+                groups = value;
                 Signal();
             }
         }
@@ -43,7 +39,7 @@ namespace Курсовая_T_T.ViewModels
             set
             {
                 selectedIndex = value;
-                TeaList = SqlModel.GetInstance().TeaList();
+                Groups = SqlModel.GetInstance().GroupList();
                 Signal();
             }
         }
@@ -59,7 +55,7 @@ namespace Курсовая_T_T.ViewModels
             }
         }
 
-        public ViewTeaVM()
+        public GroupListVM()
         {
             RowsCountVariants = new int[] { 2, 5, 10 };
             ViewRowsCount = 5;
@@ -76,14 +72,13 @@ namespace Курсовая_T_T.ViewModels
                     SelectedIndex++;
             });
         }
+
         private void InitPages()
         {
             var sqlModel = SqlModel.GetInstance();
-            int pageCount = (sqlModel.GetNumRows(typeof(Tea)) / ViewRowsCount) + 1;
+            int pageCount = (sqlModel.GetNumRows(typeof(Group)) / ViewRowsCount) + 1;
             PageIndexes = new List<int>(Enumerable.Range(1, pageCount));
             SelectedIndex = 1;
         }
-
-
     }
 }

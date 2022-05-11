@@ -30,44 +30,32 @@
             <ImageBrush ImageSource="C:\Users\ap357\OneDrive\Рабочий стол\Курсовая\Курсовая T-T\Курсовая T-T\Images\background-3.png"/>
         </Grid.Background>
 
-        <TextBlock Background="#FFD7D2B1" FontFamily="Segoe Script" FontSize="14" Grid.ColumnSpan="4" Grid.RowSpan="4">
+        <TextBlock Background="#FFD7D2B1" FontFamily="Segoe Script" FontSize="16" Grid.ColumnSpan="8" Grid.RowSpan="4">
             Шаг 8. 
             <LineBreak />
+            <LineBreak />
             Выбор чай в подарок
+            <LineBreak />   
             <LineBreak />
-Если выбираете чай для друзей, которые не очень 
+            Если выбираете чай для друзей, которые не очень хорошо разбираются в нём, то 
             <LineBreak />
-            хорошо разбираются в нём, то обратить 
+            обратить внимание стоит на классические сорта, которые все знают, их всего 
             <LineBreak />
-            внимание стоит на классические сорта, 
+            10-15. Тегуаньинь (铁观音, tiě guānyīn), пуэр и дахунпао (大红袍, dàhóngpáo) – это три 
             <LineBreak />
-            которые все знают, их всего 10-15. Тегуаньинь 
+            бестселлера. Если вам хочется цветочности и праздника во вкусе, то покупайте 
             <LineBreak />
-            (铁观音, tiě guānyīn), пуэр и дахунпао 
+            тегуаньинь. Если хотите крепости, то покупайте пуэры. А если хотите мягкости 
             <LineBreak />
-            (大红袍, dàhóngpáo) – это три бестселлера. Если 
+            и приятных ощущений, то покупайте красные чаи, которые мы называем чёрные, 
             <LineBreak />
-            вам хочется цветочности и праздника во вкусе, 
-            <LineBreak />
-            то покупайте тегуаньинь. Если хотите 
-            <LineBreak />
-            крепости, то покупайте пуэры. А если хотите 
-            <LineBreak />
-            мягкости и приятных ощущений, то 
-            <LineBreak />
-            покупайте красные чаи, которые мы называем 
-            <LineBreak />
-            чёрные, это дяньхун (滇红, diānhóng) и то, что 
-            <LineBreak />
-            делают в Уишане – серебряные и золотые брови, 
+            это дяньхун (滇红, diānhóng) и то, что делают в Уишане – серебряные и золотые брови, 
             <LineBreak />
             сяочжун.
             
-            
         </TextBlock>
-            <Button Content="Предыдущая" Click="TeaPage7_Click" Background="#FFD7D2B1" Grid.Column="0" Grid.Row="4"/>
+        <Button Content="Предыдущая" Click="Tea7" Background="#FFD7D2B1" Grid.Column="0" Grid.Row="4"/>
 
-            <Button Content="Следующая" Click="TeaPage9_Click"  Background="#FFD7D2B1" Grid.Column="7" Grid.Row="4"/>
-        <Frame x:Name="FrameTea"  Grid.ColumnSpan="8" Grid.RowSpan="5" />
+        <Button Content="Следующая" Click="Tea9" Background="#FFD7D2B1" Grid.Column="7" Grid.Row="4"/>
     </Grid>
 </Page>

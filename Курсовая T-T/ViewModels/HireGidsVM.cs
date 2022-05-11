@@ -32,6 +32,8 @@ namespace Курсовая_T_T.ViewModels
                 var model = SqlModel.GetInstance();
                 if (RegistrationGids.ID == 0)
                     model.Insert(RegistrationGids);
+                System.Windows.MessageBox.Show("Гид нанят");
+
                 currentPageControl.Back();
             });
         }
