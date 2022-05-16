@@ -18,14 +18,13 @@
                 <TextBox Text="{Binding Name}"/>
                 <Label Content="Фамилия"/>
                 <TextBox Text="{Binding LastName}"/>
-                <Label Content="Номер"/>
-                <TextBox Text="{Binding Number}"/>
                 <Label Content="Логин"/>
                 <TextBox Text="{Binding Login}"/>
                 <Label Content="Пароль"/>
                 <TextBox Text="{Binding Password}"/>
             </StackPanel>
             <Button Content="Войти в лобби и оставить отзыв" Command="{Binding SaveUser}"/>
+            <Button Content="Посмотреть группы (Внимание, если вы не вошли, ваши данные не сохнанятся)" Click="Group"/>
         </StackPanel>
         <Frame x:Name="Frame" NavigationUIVisibility="Hidden"/>
     </Grid>

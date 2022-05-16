@@ -16,11 +16,7 @@ namespace Курсовая_T_T.DTO
         public string Name { get; set; }
         [Column("lastname")]
         public string LastName { get; set; }
-        [Column("email")]
-        public string Email { get; set; }
-        [Column("number")]
-        public int Number { get; set; }
-        [Column("login")]
+        [Column("login_gid")]
         public string Login { get; set; }
         [Column("password")]
         public string Password { get; set; }

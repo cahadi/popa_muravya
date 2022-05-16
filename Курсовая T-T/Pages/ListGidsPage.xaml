@@ -29,8 +29,6 @@
                     <GridViewColumn Header="id" DisplayMemberBinding="{Binding IdGids}"/>
                     <GridViewColumn Header="Имя" DisplayMemberBinding="{Binding Name}"/>
                     <GridViewColumn Header="Фамилия" DisplayMemberBinding="{Binding LastName}"/>
-                    <GridViewColumn Header="Email" DisplayMemberBinding="{Binding Email}"/>
-                    <GridViewColumn Header="Номер" DisplayMemberBinding="{Binding Number}"/>
                     <GridViewColumn Header="Логин" DisplayMemberBinding="{Binding Login}"/>
                 </GridView>
             </ListView.View>

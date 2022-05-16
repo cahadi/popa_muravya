@@ -37,8 +37,7 @@ namespace Курсовая_T_T.Model
                             ID = dr.GetInt32("id_user"),
                             Name = dr.GetString("name"),
                             LastName = dr.GetString("lastname"),
-                            Number = dr.GetInt32("number"),
-                            Login = dr.GetString("login"),
+                            Login = dr.GetString("login_user"),
                             Password = dr.GetString("password")
                         });
                     }
@@ -65,9 +64,7 @@ namespace Курсовая_T_T.Model
                             IdGids = dr.GetInt32("id_gids"),
                             Name = dr.GetString("name"),
                             LastName = dr.GetString("lastname"),
-                            Email = dr.GetString("email"),
-                            Number = dr.GetInt32("number"),
-                            Login = dr.GetString("login"),
+                            Login = dr.GetString("login_gid"),
                             Password = dr.GetString("password")
                         });
                     }
@@ -83,7 +80,7 @@ namespace Курсовая_T_T.Model
             var password = SelectGids.Password;
             var gids = new List<Gids>();
             var mySqlDB = MySqlDB.GetDB();
-            string query = $"SELECT * FROM `gids` WHERE gids.login = `{login}` and gids.password = `{password}`";
+            string query = $"SELECT * FROM `gids` WHERE gids.login_gid = `{login}` and gids.password = `{password}`";
             if (mySqlDB.OpenConnection())
             {
                 using (MySqlCommand mc = new MySqlCommand(query, mySqlDB.sqlConnection))
@@ -96,9 +93,7 @@ namespace Курсовая_T_T.Model
                             IdGids = dr.GetInt32("id_gids"),
                             Name = dr.GetString("name"),
                             LastName = dr.GetString("lastname"),
-                            Email = dr.GetString("email"),
-                            Number = dr.GetInt32("number"),
-                            Login = dr.GetString("login"),
+                            Login = dr.GetString("login_gid"),
                             Password = dr.GetString("password")
                         });
                     }
@@ -179,9 +174,7 @@ namespace Курсовая_T_T.Model
                             IdGids = dr.GetInt32("id_gids"),
                             Name = dr.GetString("name"),
                             LastName = dr.GetString("lastname"),
-                            Email = dr.GetString("email"),
-                            Number = dr.GetInt32("number"),
-                            Login = dr.GetString("login"),
+                            Login = dr.GetString("login_gid"),
                             Password = dr.GetString("password")
                         });
                     }

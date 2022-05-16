@@ -14,10 +14,6 @@
                 <TextBox Text="{Binding Name}"/>
                 <Label Content="Фамилия"/>
                 <TextBox Text="{Binding LastName}"/>
-                <Label Content="Email"/>
-                <TextBox Text="{Binding Email}"/>
-                <Label Content="Номер"/>
-                <TextBox Text="{Binding Number}"/>
                 <Label Content="Логин"/>
                 <TextBox Text="{Binding Login}"/>
                 <Label Content="Пароль"/>

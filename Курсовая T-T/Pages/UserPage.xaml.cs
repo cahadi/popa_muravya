@@ -23,5 +23,10 @@ namespace Курсовая_T_T.Pages
             InitializeComponent();
             DataContext = vm;
         }
+
+        private void Group(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("Pages/GroupListPage.xaml", UriKind.Relative));
+        }
     }
 }
